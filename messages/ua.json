@@ -1,0 +1,259 @@
+{
+  "header": {
+    "headerNav": {
+      "navRoadmap": "Дорожня карта",
+      "navIntegrationMap": "Інтеграційна карта",
+      "navDocuments": "Документація",
+      "navCourses": "Курси",
+      "navMap": "Мапа",
+      "navContactUs": "Зв'язатись з нами",
+      "navSupport": "Підтримка",
+      "navAccount": "Профіль",
+      "navLegal": "Політика приватності"
+    },
+    "headerProfile": {
+      "profile": "Профіль",
+      "signIn": "Увійти"
+    },
+    "headerSearch": {
+      "searchInput": "Пошук...",
+      "searchResult": "Нічого не знайдено"
+    }
+  },
+
+  "loginForm": {
+    "loginWelcome": "Ласкаво просимо! Увійдіть до свого акаунта",
+    "loginExistingAccount": "Увійдіть у свій існуючий акаунт, щоб перевіряти поточні замовлення та більше",
+    "loginRemember": "Запам'ятати мене",
+    "loginForgot": "Забули пароль",
+    "loginQuickAuthorization": "Швидка авторизація",
+    "signIn": "Увійти",
+    "register": "Зареєструватися",
+    "loginFirstTime": "Вперше на Homezy",
+    "LoginCreate": "Створити аккаунт",
+    "loginAllAttempts": "Ви вичерпали всі спроби",
+    "loginAttemptsLeft": "Залишилось спроб",
+    "LoginGoOut": "Вийти",
+
+    "notAuthorized": "Ви не авторизовані. Увійдіть, щоб продовжити.",
+    "personalAccount": "Особистий кабінет",
+    "profile": "Профіль",
+    "documentHistory": "Історія документів",
+
+    "months": {
+      "january": "Січень",
+      "february": "Лютий",
+      "march": "Березень",
+      "april": "Квітень",
+      "may": "Травень",
+      "june": "Червень",
+      "july": "Липень",
+      "august": "Серпень",
+      "september": "Вересень",
+      "october": "Жовтень",
+      "november": "Листопад",
+      "december": "Грудень"
+    }
+  },
+
+  "accountSection": {
+    "accountGreeting": "Привіт",
+    "accountWelcome": "Ласкаво просимо до вашої панелі управління — універсального центру для всіх ваших останніх дій у обліковому записі",
+    "accountMyInfo": "Моя інформація",
+    "accountMyAddress": "Моя адреса",
+    "accountNewPassword": "Новий пароль",
+    "accountLatestInformation": "Отримувати найсвіжішу інформацію",
+    "linkedAccounts": "Прив'язані аккаунти",
+    "accountTieUp": "Підв'язати",
+    "accountButton": "Оновити",
+
+    "inputs": {
+      "name": "Ім'я",
+      "lastName": "Прізвище",
+      "dateOfBirth": "Дата народження",
+      "email": "Електрона пошта",
+      "confirmEmail": "Підтвердіть електронну пошту",
+      "phoneNumber": "Номер телефону",
+      "month": "Місяць",
+      "day": "День",
+      "chooseSettlement": "Оберіть населений пункт",
+      "street": "Вулиця, будинок/квартира",
+      "password": "Пароль",
+      "yourPassword": "Ваш пароль",
+      "confirmPassword": "Підтвердіть пароль"
+    }
+  },
+
+  "footer": {
+    "navigationTitle": "Навігація",
+    "contactTitle": "Контакти",
+    "officesTitle": "Офіси",
+    "socialTitle": "Ми в соцмережах",
+    "rightsTitle": "© 2025 Homezy AG. Всі права захищені."
+  },
+
+  "homePage": {
+    "heroSection": {
+      "heroTitle": "Персоналізований інтеграційний хаб для життя в Швейцарії",
+      "heroInfo": "Замість хаосу бюрократії — чітка дорожня карта, шаблони, підтримка і навчання, адаптовані саме для вас.",
+      "heroButton": "Почати інтеграцію"
+    },
+    "rewiewSection": {
+      "rewiewTitle": "Відгуки наших користувачів"
+    }
+  },
+
+  "libraryPage": {
+    "categoriesSection": {
+      "categoriesTitle": "Категорії бібліотеки",
+      "categoriesCard1": {
+        "categoriesTitle": "Договори оренди (Mietvertrag)",
+        "categoriesDescription": "Шаблони та пояснення договорів оренди житла в Швейцарії."
+      },
+      "categoriesCard2": {
+        "categoriesTitle": "Заяви на дозволи",
+        "categoriesDescription": "Бланки та інструкції для отримання дозволів на проживання, роботу тощо."
+      },
+      "categoriesCard3": {
+        "categoriesTitle": "Шаблони листів у Gemeinde",
+        "categoriesDescription": "Приклади листів для спілкування з органами влади."
+      },
+      "categoriesCard4": {
+        "categoriesTitle": "Приклади CV / Motivation Letter",
+        "categoriesDescription": "Готові приклади та шаблони CV та мотиваційних листів."
+      },
+      "categoriesCard5": {
+        "categoriesTitle": "Банківські документи",
+        "categoriesDescription": "Шаблони та переклади документів для відкриття рахунків, кредитів тощо."
+      },
+      "categoriesCard6": {
+        "categoriesTitle": "Страхування",
+        "categoriesDescription": "Документи та шаблони для страхових компаній."
+      },
+      "categoriesCard7": {
+        "categoriesTitle": "Податки",
+        "categoriesDescription": "Приклади декларацій, форм та пояснення податкових термінів."
+      }
+    },
+
+    "formatSection": {
+      "title": "Формат документів",
+      "description": "Всі документи в нашій бібліотеці представлені у форматі PDF з можливістю онлайн-прев’ю. Це дозволяє переглядати вміст без необхідності завантаження, що зручно та економить час.",
+      "commentsSection": {
+        "title": "Коментарі та пояснення",
+        "description": "Кожне поле у документі супроводжується докладними коментарями та поясненнями, які допомагають правильно заповнити форму та уникнути помилок. Це особливо важливо для юридичних та офіційних документів."
+      },
+      "translationsSection": {
+        "title": "Переклади",
+        "description": "Для більшої зручності ми надаємо переклади ключових документів та форм на українську, англійську та інші мови. Особливо важливо, що оригінальні документи часто доступні німецькою чи французькою — ми забезпечуємо їх точний переклад для кращого розуміння.",
+        "list": [
+          "Німецька → Українська / Англійська",
+          "Французька → Українська / Англійська",
+          "Інші мови за потреби"
+        ]
+      },
+      "accessibilitySection": {
+        "title": "Зручність та доступність",
+        "description": "Наші документи адаптовані для використання як на десктопах, так і на мобільних пристроях. Онлайн-прев’ю інтегроване безпосередньо на сайті, що робить роботу з документами швидкою та комфортною."
+      }
+    }
+  },
+
+  "integrationMapPage": {
+    "integrationMapSection": {
+      "integrationTitle": "Каталог сервісів і локацій",
+      "integrationPhone": "Телефон: ",
+      "integrationEmail": "Email: ",
+      "integrationSchedule": "Розклад: ",
+      "integrationSite": "Вебсайт",
+      "integrationRoute": "Прокласти маршрут",
+      "integrationSignUp": "Записатись"
+    }
+  },
+
+  "coursesPage": {
+    "coursesSection": {
+      "coursesTitle": "Курси та навчальні програми"
+    },
+    "coursesMapSection": {
+      "coursesMapTitle": "Мовні школи у кантоні Цюрих"
+    }
+  },
+
+  "contactUsPage": {
+    "contactUsSection": {
+      "contactUsTitle": "Зв'яжіться з нами",
+      "contactUsText": "Якщо у вас є запитання, пропозиції або вам потрібна допомога, будь ласка, зв'яжіться з нами. Ми завжди раді допомогти вам!",
+      "contactUsAttempts": "Ви вичерпали всі спроби!",
+      "contactUsAttemptsLeft": "Залишилось спроб:",
+      "contactUsName": "Ім'я",
+      "contactUsMessage": "Повідомлення",
+      "contactUsSend": "Відправити",
+      "contactUsTelegram": "Напишіть нам у Telegram для швидкої допомоги!"
+    }
+  },
+
+  "roadmapPage": {
+    "roadmapHeroSection": {
+      "roadmapHeroTitle": "Дорожня карта інтеграції (Integration Roadmap)",
+      "roadmapHeroText": "Ключовий функціональний модуль, що дає покрокову інструкцію для інтеграції мігрантів у Швейцарії."
+    },
+    "roadmapHeroNav": {
+      "roadmapHeroNavTitle": "Навігація по розділах",
+      "roadmapHeroNavIntegration": "Інтеграція",
+      "roadmapHeroNavMove": "Приїзд / Переїзд",
+      "roadmapHeroNavHouse": "Житло",
+      "roadmapHeroNavJob": "Робота / Освіта",
+      "roadmapHeroNavLanguage": "Мова",
+      "roadmapHeroNavMedicine": "Медицина",
+      "roadmapHeroNavFinance": "Фінанси"
+    },
+    "integrationSection": {
+      "integrationTitle": "Інтеграція"
+    },
+    "arrivalSection": {
+      "arrivalTitle": "Приїзд / Переїзд"
+    },
+    "housingSection": {
+      "housingTitle": "Житло у Швейцарії"
+    },
+    "workEducationSection": {
+      "workEducationTitle": "Робота / Освіта у Швейцарії"
+    },
+    "languageSection": {
+      "languageTitle": "Мова"
+    },
+    "medicineSection": {
+      "medicineTitle": "Medizin",
+      "insuranceTitle": "Страхування (Krankenkasse)",
+      "insuranceText": "Медичне страхування є обов’язковим з першого дня перебування у Швейцарії. Порівняти тарифи і вибрати страховку можна на Comparis.ch.",
+      "familyDoctorTitle": "Сімейний лікар",
+      "familyDoctorText": "Рекомендується знайти сімейного лікаря поруч із вашим місцем проживання. Для цього використовуйте карту нижче зі синіми маркерами.",
+      "pharmaciesTitle": "Аптеки, невідкладна допомога",
+      "emergencyText": "Для виклику швидкої допомоги телефонуйте 144. Аптеки позначені зеленими маркерами на карті.",
+      "pharmaciesDetailsText": "Деталі найближчих аптек можна також знайти на сайтах вашого кантону або за допомогою OpenStreetMap."
+    },
+    "financeSection": {
+      "financeTitle": "Фінанси"
+    }
+  },
+
+  "categoryDetailsSection": {
+    "categorySubTitle": "Документи та ресурси",
+    "categoryFillDetails": "Заповніть дані",
+    "categoryView": "Переглянути пояснення",
+    "passportData": "Паспортні дані",
+    "categoryDownload": "Завантажити документ",
+    "categoryDownloadPDF": "Завантажити PDF",
+    "openButton": "Відкрити форму",
+    "сancelButton": "Відмінити"
+  },
+
+  "legalPage": {
+    "legalSection": {
+      "legalTitle": "Потрібна допомога?",
+      "legalText": "Якщо у вас залишились питання або потрібна консультація, будь ласка, звертайтесь до нашої служби підтримки.",
+      "legalButton": "Контакти"
+    }
+  }
+}

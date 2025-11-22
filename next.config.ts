@@ -1,7 +1,23 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const baseConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 
-const nextConfig: NextConfig = {
-  /* config options here */
+  sassOptions: {
+    includePaths: ["styles"],
+  },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+const createNextIntlPlugin = require("next-intl/plugin");
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+module.exports = withNextIntl(baseConfig);

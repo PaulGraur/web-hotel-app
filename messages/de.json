@@ -1,0 +1,259 @@
+{
+  "header": {
+    "headerNav": {
+      "navRoadmap": "Fahrplan",
+      "navIntegrationMap": "Integrationskarte",
+      "navDocuments": "Dokumentation",
+      "navCourses": "Kurse",
+      "navMap": "Karte",
+      "navContactUs": "Kontaktieren Sie uns",
+      "navSupport": "Support",
+      "navAccount": "Profil",
+      "navLegal": "Datenschutzrichtlinie"
+    },
+    "headerProfile": {
+      "profile": "Profil",
+      "signIn": "Anmelden"
+    },
+    "headerSearch": {
+      "searchInput": "Suchen...",
+      "searchResult": "Nichts gefunden"
+    }
+  },
+
+  "loginForm": {
+    "loginWelcome": "Willkommen! Melden Sie sich in Ihrem Konto an",
+    "loginExistingAccount": "Melden Sie sich in Ihrem bestehenden Konto an, um aktuelle Bestellungen und mehr zu prüfen",
+    "loginRemember": "Angemeldet bleiben",
+    "loginForgot": "Passwort vergessen",
+    "loginQuickAuthorization": "Schnelle Anmeldung",
+    "signIn": "Anmelden",
+    "register": "Registrieren",
+    "loginFirstTime": "Zum ersten Mal auf Homezy",
+    "LoginCreate": "Ein Konto erstellen",
+    "loginAllAttempts": "Sie haben alle Versuche ausgeschöpft.",
+    "loginAttemptsLeft": "Verbleibende Versuche",
+    "LoginGoOut": "Hinausgehen",
+
+    "notAuthorized": "Sie sind nicht angemeldet. Bitte melden Sie sich an, um fortzufahren.",
+    "personalAccount": "Persönliches Konto",
+    "profile": "Profil",
+    "documentHistory": "Dokumentverlauf",
+
+    "months": {
+      "january": "Januar",
+      "february": "Februar",
+      "march": "März",
+      "april": "April",
+      "may": "Mai",
+      "june": "Juni",
+      "july": "Juli",
+      "august": "August",
+      "september": "September",
+      "october": "Oktober",
+      "november": "November",
+      "december": "Dezember"
+    }
+  },
+
+  "accountSection": {
+    "accountGreeting": "Hallo",
+    "accountWelcome": "Willkommen in Ihrem Dashboard – Ihrem zentralen Ort für alle Ihre aktuellen Kontoinformationen",
+    "accountMyInfo": "Meine Daten",
+    "accountMyAddress": "Meine Adresse",
+    "accountNewPassword": "Neues Passwort",
+    "accountLatestInformation": "Neueste Informationen erhalten",
+    "linkedAccounts": "Verknüpfte Konten",
+    "accountTieUp": "Verknüpfen",
+    "accountButton": "Aktualisieren",
+
+    "inputs": {
+      "name": "Vorname",
+      "lastName": "Nachname",
+      "dateOfBirth": "Geburtsdatum",
+      "email": "E-Mail",
+      "confirmEmail": "E-Mail bestätigen",
+      "phoneNumber": "Telefonnummer",
+      "month": "Monat",
+      "day": "Tag",
+      "chooseSettlement": "Ort auswählen",
+      "street": "Straße, Haus/Wohnung",
+      "password": "Passwort",
+      "yourPassword": "Ihr Passwort",
+      "confirmPassword": "Passwort bestätigen"
+    }
+  },
+
+  "footer": {
+    "navigationTitle": "Navigation",
+    "contactTitle": "Kontakt",
+    "officesTitle": "Büros",
+    "socialTitle": "Wir in den sozialen Medien",
+    "rightsTitle": "© 2025 Homezy AG. Alle Rechte vorbehalten."
+  },
+
+  "homePage": {
+    "heroSection": {
+      "heroTitle": "Personalisierte Integrationsplattform für das Leben in der Schweiz",
+      "heroInfo": "Statt Bürokratie-Chaos – klare Roadmap, Vorlagen, Unterstützung und Schulungen, genau auf Sie zugeschnitten.",
+      "heroButton": "Integration starten"
+    },
+    "rewiewSection": {
+      "rewiewTitle": "Bewertungen unserer Benutzer"
+    }
+  },
+
+  "libraryPage": {
+    "categoriesSection": {
+      "categoriesTitle": "Bibliothekskategorien",
+      "categoriesCard1": {
+        "categoriesTitle": "Mietverträge (Mietvertrag)",
+        "categoriesDescription": "Vorlagen und Erläuterungen zu Mietverträgen für Wohnraum in der Schweiz."
+      },
+      "categoriesCard2": {
+        "categoriesTitle": "Bewilligungsanträge",
+        "categoriesDescription": "Formulare und Anleitungen für Aufenthalts-, Arbeitsbewilligungen usw."
+      },
+      "categoriesCard3": {
+        "categoriesTitle": "Briefvorlagen für die Gemeinde",
+        "categoriesDescription": "Beispiele für Schreiben an Behörden."
+      },
+      "categoriesCard4": {
+        "categoriesTitle": "Beispiele für CV / Motivationsschreiben",
+        "categoriesDescription": "Fertige Beispiele und Vorlagen für Lebensläufe und Motivationsschreiben."
+      },
+      "categoriesCard5": {
+        "categoriesTitle": "Bankdokumente",
+        "categoriesDescription": "Vorlagen und Übersetzungen von Dokumenten für Kontoeröffnung, Kredite usw."
+      },
+      "categoriesCard6": {
+        "categoriesTitle": "Versicherungen",
+        "categoriesDescription": "Dokumente und Vorlagen für Versicherungsunternehmen."
+      },
+      "categoriesCard7": {
+        "categoriesTitle": "Steuern",
+        "categoriesDescription": "Beispiele für Steuererklärungen, Formulare und Erläuterungen steuerlicher Begriffe."
+      }
+    },
+
+    "formatSection": {
+      "title": "Dokumentenformat",
+      "description": "Alle Dokumente in unserer Bibliothek liegen im PDF-Format mit Online-Vorschau vor. So können Sie den Inhalt ansehen, ohne herunterladen zu müssen, was praktisch ist und Zeit spart.",
+      "commentsSection": {
+        "title": "Kommentare und Erläuterungen",
+        "description": "Jedes Feld im Dokument wird von ausführlichen Kommentaren und Erläuterungen begleitet, die helfen, das Formular korrekt auszufüllen und Fehler zu vermeiden. Dies ist besonders wichtig für juristische und offizielle Dokumente."
+      },
+      "translationsSection": {
+        "title": "Übersetzungen",
+        "description": "Für mehr Komfort bieten wir Übersetzungen wichtiger Dokumente und Formulare ins Ukrainische, Englische und andere Sprachen an. Besonders wichtig ist, dass Originaldokumente oft auf Deutsch oder Französisch vorliegen – wir sorgen für eine genaue Übersetzung zum besseren Verständnis.",
+        "list": [
+          "Deutsch → Ukrainisch / Englisch",
+          "Französisch → Ukrainisch / Englisch",
+          "Weitere Sprachen nach Bedarf"
+        ]
+      },
+      "accessibilitySection": {
+        "title": "Benutzerfreundlichkeit und Zugänglichkeit",
+        "description": "Unsere Dokumente sind für die Nutzung auf Desktops und Mobilgeräten optimiert. Die Online-Vorschau ist direkt auf der Webseite integriert, was die Arbeit mit den Dokumenten schnell und komfortabel macht."
+      }
+    }
+  },
+
+  "integrationMapPage": {
+    "integrationMapSection": {
+      "integrationTitle": "Verzeichnis der Dienste und Standorte",
+      "integrationPhone": "Telefon: ",
+      "integrationEmail": "E-Mail: ",
+      "integrationSchedule": "Öffnungszeiten: ",
+      "integrationSite": "Webseite",
+      "integrationRoute": "Wegbeschreibung erhalten",
+      "integrationSignUp": "Melden Sie sich an"
+    }
+  },
+
+  "coursesPage": {
+    "coursesSection": {
+      "coursesTitle": "Kurse und Schulungsprogramme"
+    },
+    "coursesMapSection": {
+      "coursesMapTitle": "Sprachschulen im Kanton Zürich"
+    }
+  },
+
+  "contactUsPage": {
+    "contactUsSection": {
+      "contactUsTitle": "Kontaktieren Sie uns",
+      "contactUsText": "Wenn Sie Fragen, Anregungen haben oder Hilfe benötigen, kontaktieren Sie uns bitte. Wir helfen Ihnen gerne weiter!",
+      "contactUsAttempts": "Sie haben alle Versuche aufgebraucht!",
+      "contactUsAttemptsLeft": "Verbleibende Versuche:",
+      "contactUsName": "Name",
+      "contactUsMessage": "Nachricht",
+      "contactUsSend": "Senden",
+      "contactUsTelegram": "Schreiben Sie uns auf Telegram für schnelle Hilfe!"
+    }
+  },
+
+  "roadmapPage": {
+    "roadmapHeroSection": {
+      "roadmapHeroTitle": "Integrationsfahrplan",
+      "roadmapHeroText": "Ein zentraler funktionaler Modul, der eine Schritt-für-Schritt-Anleitung für die Integration von Migranten in der Schweiz bietet."
+    },
+    "roadmapHeroNav": {
+      "roadmapHeroNavTitle": "Navigation durch die Abschnitte",
+      "roadmapHeroNavIntegration": "Integration",
+      "roadmapHeroNavMove": "Ankunft / Umzug",
+      "roadmapHeroNavHouse": "Wohnen",
+      "roadmapHeroNavJob": "Arbeit / Bildung",
+      "roadmapHeroNavLanguage": "Sprache",
+      "roadmapHeroNavMedicine": "Medizin",
+      "roadmapHeroNavFinance": "Finanzen"
+    },
+    "integrationSection": {
+      "integrationTitle": "Integration"
+    },
+    "arrivalSection": {
+      "arrivalTitle": "Ankunft / Umzug"
+    },
+    "housingSection": {
+      "housingTitle": "Wohnen in der Schweiz"
+    },
+    "workEducationSection": {
+      "workEducationTitle": "Arbeit / Ausbildung in der Schweiz"
+    },
+    "languageSection": {
+      "languageTitle": "Sprache"
+    },
+    "medicineSection": {
+      "medicineTitle": "Medizin",
+      "insuranceTitle": "Versicherung (Krankenkasse)",
+      "insuranceText": "Die Krankenversicherung ist ab dem ersten Tag Ihres Aufenthalts in der Schweiz obligatorisch. Sie können Tarife vergleichen und eine Versicherung auf Comparis.ch auswählen.",
+      "familyDoctorTitle": "Hausarzt",
+      "familyDoctorText": "Es wird empfohlen, einen Hausarzt in der Nähe Ihres Wohnortes zu finden. Verwenden Sie dazu die untenstehende Karte mit blauen Markierungen.",
+      "pharmaciesTitle": "Apotheken, Notfallversorgung",
+      "emergencyText": "Für einen Notruf rufen Sie die 144 an. Apotheken sind auf der Karte mit grünen Markierungen gekennzeichnet.",
+      "pharmaciesDetailsText": "Details der nächstgelegenen Apotheken finden Sie auch auf den Websites Ihres Kantons oder mit OpenStreetMap."
+    },
+    "financeSection": {
+      "financeTitle": "Finanzen"
+    }
+  },
+
+  "categoryDetailsSection": {
+    "categorySubTitle": "Dokumente und Ressourcen",
+    "categoryFillDetails": "Füllen Sie die Details aus",
+    "categoryView": "Erklärung anzeigen",
+    "passportData": "Passdaten",
+    "categoryDownload": "Dokument herunterladen",
+    "categoryDownloadPDF": "PDF herunterladen",
+    "openButton": "Formular öffnen",
+    "сancelButton": "Stornieren"
+  },
+
+  "legalPage": {
+    "legalSection": {
+      "legalTitle": "Brauchen Sie Hilfe?",
+      "legalText": "Wenn Sie noch Fragen haben oder eine Beratung benötigen, wenden Sie sich bitte an unseren Support.",
+      "legalButton": "Kontakt"
+    }
+  }
+}
