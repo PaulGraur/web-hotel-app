@@ -3,6 +3,7 @@ import SolutionSection from "@/app/sections/home-page/SolutionSection";
 import FeatureSection from "@/app/sections/home-page/FeatureSection";
 import InformationSections from "@/app/sections/home-page/InformationSections";
 import OurSoftwareSection from "@/app/sections/home-page/OurSoftwareSection";
+import PricingPlanSection from "@/app/sections/home-page/PricingPlanSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeatureSection />
       <InformationSections />
       <OurSoftwareSection />
+      <PricingPlanSection />
     </div>
   );
 }

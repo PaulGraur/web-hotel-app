@@ -1,121 +1,42 @@
-import React, { FC, ReactNode } from "react";
-import Image from "next/image";
-import { Link } from "@/navigation";
-
-import Back from "@/images/vectors/back.svg";
-import Cube from "@/images/vectors/cube.svg";
+import React, { FC } from "react";
+import Link from "next/link";
 
 interface ButtonProps {
-  text?: string;
-  className?: string;
+  text: string;
+  variant?: "outline" | "filled";
   href?: string;
-  target?: string;
-  tag?: "Link" | "button";
-  type?: "button" | "submit" | "reset";
-  background?: "ebony" | "transparent" | "crimson" | "white";
-  bordered?: boolean;
-  fullWidth?: boolean;
-  disabled?: boolean;
   onClick?: () => void;
-  icon?:
-    | "cube"
-    | "profile"
-    | "telegram"
-    | "facebook"
-    | "instagram"
-    | "google"
-    | "logout"
-    | "back";
+  download?: boolean;
+  className?: string;
 }
 
 const Button: FC<ButtonProps> = ({
   text,
-  className = "",
-  href = "",
-  target,
-  tag = "button",
-  type = "button",
-  background = "ebony",
-  bordered = false,
-  fullWidth = false,
-  disabled = false,
+  variant = "outline",
+  href,
   onClick,
-  icon,
+  download = false,
+  className,
 }) => {
-  const finalBackground = bordered ? "transparent" : background;
-  const backgroundClass =
-    finalBackground === "ebony"
-      ? "bg-ebony"
-      : finalBackground === "white"
-      ? "bg-show"
-      : finalBackground === "crimson"
-      ? "bg-crimson"
-      : "bg-transparent";
+  const base = `${className} rounded-[30px] font-semibold py-3 px-10 transition-all duration-300 border-[1px] border-solid cursor-pointer`;
 
-  const disabledBg =
-    finalBackground === "ebony"
-      ? "disabled:bg-ebony disabled:bg-opacity-50 disabled:text-ivory"
-      : "disabled:bg-black disabled:bg-opacity-60 disabled:text-ivory";
+  const outline =
+    "text-crimson border-crimson bg-transparent hover:bg-crimson hover:text-white";
 
-  const textClass =
-    finalBackground === "ebony" || finalBackground === "crimson"
-      ? "text-white"
-      : bordered
-      ? "text-ebony"
-      : "";
+  const filled = "bg-crimson border-crimson text-white hover:bg-crimson/80";
 
-  const borderClass = bordered ? "border border-ebony border-solid" : "";
-  const widthClass = fullWidth ? "w-full" : "";
-  const hoverClass = bordered
-    ? "hover:bg-ebony/85 hover:text-white transition-colors duration-300"
-    : finalBackground === "ebony"
-    ? "hover:bg-ebony/85 transition-colors duration-300"
-    : "";
+  const classes = `${base} ${variant === "outline" ? outline : filled}`;
 
-  const classes = `${className} ${disabledBg} ${backgroundClass} ${borderClass} ${textClass} ${widthClass} ${hoverClass} w-max text-ebony text-[22px] font-bold py-[12px] px-[30px] rounded-[36px] flex items-center justify-center disabled:cursor-not-allowed group`;
-
-  const renderIcon = () => {
-    const iconMap: Record<string, ReactNode> = {
-      cube: (
-        <Image
-          src={Cube}
-          alt="Cube"
-          width={20}
-          height={20}
-          className="mr-2 inline-block"
-        />
-      ),
-      back: (
-        <Image
-          src={Back}
-          alt="Back icon"
-          width={20}
-          height={20}
-          className="mr-2 inline-block w-[15px] filter group-hover:brightness-0 group-hover:invert group-active:brightness-0 group-active:invert transition duration-300 ease-in-out"
-        />
-      ),
-    };
-
-    return icon ? iconMap[icon] : null;
-  };
-
-  if (tag === "Link" && href) {
+  if (href) {
     return (
-      <Link href={href} target={target} className={classes}>
-        {renderIcon()}
+      <Link href={href} className={classes} download={download}>
         {text}
       </Link>
     );
   }
 
   return (
-    <button
-      type={type}
-      disabled={disabled}
-      onClick={onClick}
-      className={classes}
-    >
-      {renderIcon()}
+    <button className={classes} onClick={onClick}>
       {text}
     </button>
   );

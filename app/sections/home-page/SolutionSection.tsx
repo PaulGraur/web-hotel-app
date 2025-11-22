@@ -82,7 +82,7 @@ const SolutionSection = () => {
           />
 
           <div className="flex items-center gap-[25px] mt-[30px]">
-            <Button text="Learn more" />
+            <Button text="Learn more" variant="filled" />
 
             <Link href="/" className="font-bold text-[22px] text-crimson">
               Ask?

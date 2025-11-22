@@ -3,9 +3,9 @@ import { locales } from "@/navigation";
 
 export default createMiddleware({
   locales,
-  defaultLocale: "ua",
+  defaultLocale: "de",
 });
 
 export const config = {
-  matcher: ["/", "/(ua|de|en)/:path*"],
+  matcher: ["/", "/(de|en)/:path*"],
 };

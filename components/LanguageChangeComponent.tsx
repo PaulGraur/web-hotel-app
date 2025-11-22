@@ -4,7 +4,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import Arrow from "@/images/navigation/arrow.svg";
+import Arrow from "@/images/vectors/arrowLoc.svg";
 
 interface LanguageProps {
   className?: string;
@@ -13,12 +13,11 @@ interface LanguageProps {
 type Country = {
   code: string;
   name: string;
-  locale: "de" | "ua" | "en" | undefined;
+  locale: "de" | "en" | undefined;
 };
 
 const countriesMenu: Country[] = [
   { code: "DE", name: "De", locale: "de" },
-  { code: "UK", name: "Ua", locale: "ua" },
   { code: "EN", name: "En", locale: "en" },
 ];
 
@@ -80,7 +79,7 @@ const LanguageChangeComponent: FC<LanguageProps> = ({ className }) => {
         onClick={handleDropdownClick}
       >
         <div className="flex items-center gap-[8px]">
-          <p className="z-50 xl:w-[60px] mr-[4px] select-none font-normal text-right text-[18px] xl:text-[24px] text-ebony">
+          <p className="z-50 font-medium xl:w-[60px] mr-[4px] select-none text-right text-[22px] xl:text-[24px] text-ebony">
             {selectedCountry.name}
           </p>
 
@@ -119,7 +118,7 @@ const LanguageChangeComponent: FC<LanguageProps> = ({ className }) => {
                       transition={{ duration: 0.3 }}
                       onClick={() => handleCountrySelection(country)}
                     >
-                      <p className="w-[44px] xl:w-[60px] select-none font-bold text-center text-[18px] xl:text-[20px] text-ebony/80">
+                      <p className="w-[44px] xl:w-[60px] select-none font-bold text-center text-[22px] xl:text-[24px] text-ebony/80">
                         {country.name}
                       </p>
                     </motion.li>

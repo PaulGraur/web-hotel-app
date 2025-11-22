@@ -12,6 +12,7 @@ import LoaderComponent from "@/components/LoaderComponent";
 import { useTranslations } from "next-intl";
 
 import Message from "@/images/contact-us/message.svg";
+import information from "@/images/home-page/information-page/information.png";
 
 const ContactUsSection = () => {
   const t = useTranslations("contactUsPage.contactUsSection");
@@ -196,32 +197,18 @@ const ContactUsSection = () => {
                   disabled={isDisabled}
                 />
               </div>
-              <Button
-                text={t("contactUsSend")}
-                background="ebony"
-                disabled={isDisabled}
-                type="submit"
-                tag="button"
-                onClick={() => {
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
-                }}
-              />
+              <Button text={t("contactUsSend")} variant="filled" />
             </form>
           </div>
 
-          <div className="w-[90%] lg:w-[47%] xl:w-[50%] flex justify-end">
-            {/* <Image
-              src={ContactUsImage}
+            <Image
+              src={information}
               alt="contact us"
-              className="object-cover h-[640px] w-[100%] lg:w-[500px] xl:w-[500px] rounded-[24px] shadow-xl"
+              className="object-cover h-[500px] w-[100%]"
               height={1320}
               width={1080}
               loading="lazy"
-            /> */}
-          </div>
+            />
         </div>
 
         {isMobile && showButton && (
