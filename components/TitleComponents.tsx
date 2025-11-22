@@ -12,16 +12,17 @@ const TitleComponents = ({ text, additionalText = "" }: TitleProps) => {
       <div className="container">
         {additionalText ? (
           <>
-            <Typography tag="h1" align="center">
-              {text}
-            </Typography>
+            <Typography tag="h1" align="center" text={text} />
 
-            <Typography tag="p">{additionalText}</Typography>
+            <Typography tag="p" text={additionalText} />
           </>
         ) : (
-          <Typography tag="h1" align="center" className="text-white">
-            {text}
-          </Typography>
+          <Typography
+            tag="h1"
+            align="center"
+            text={text}
+            className="text-white"
+          />
         )}
       </div>
     </div>

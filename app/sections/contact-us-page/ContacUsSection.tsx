@@ -148,7 +148,6 @@ const ContactUsSection = () => {
                 <Typography
                   tag="p"
                   align="center"
-                  color="red"
                   mt
                   fontWeight="bold"
                   text={t("contactUsAttempts")}
@@ -199,7 +198,7 @@ const ContactUsSection = () => {
               </div>
               <Button
                 text={t("contactUsSend")}
-                background="darkBlack"
+                background="ebony"
                 disabled={isDisabled}
                 type="submit"
                 tag="button"
