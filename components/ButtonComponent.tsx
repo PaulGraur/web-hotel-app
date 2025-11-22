@@ -12,7 +12,7 @@ interface ButtonProps {
   target?: string;
   tag?: "Link" | "button";
   type?: "button" | "submit" | "reset";
-  background?: "ebony" | "transparent" | "onyx" | "white";
+  background?: "ebony" | "transparent" | "crimson" | "white";
   bordered?: boolean;
   fullWidth?: boolean;
   disabled?: boolean;
@@ -48,8 +48,8 @@ const Button: FC<ButtonProps> = ({
       ? "bg-ebony"
       : finalBackground === "white"
       ? "bg-show"
-      : finalBackground === "onyx"
-      ? "bg-onyx"
+      : finalBackground === "crimson"
+      ? "bg-crimson"
       : "bg-transparent";
 
   const disabledBg =
@@ -58,7 +58,7 @@ const Button: FC<ButtonProps> = ({
       : "disabled:bg-black disabled:bg-opacity-60 disabled:text-ivory";
 
   const textClass =
-    finalBackground === "ebony" || finalBackground === "onyx"
+    finalBackground === "ebony" || finalBackground === "crimson"
       ? "text-white"
       : bordered
       ? "text-ebony"

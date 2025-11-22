@@ -2,6 +2,7 @@ import HeroSection from "@/app/sections/home-page/HeroSection";
 import SolutionSection from "@/app/sections/home-page/SolutionSection";
 import FeatureSection from "@/app/sections/home-page/FeatureSection";
 import InformationSections from "@/app/sections/home-page/InformationSections";
+import OurSoftwareSection from "@/app/sections/home-page/OurSoftwareSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <SolutionSection />
       <FeatureSection />
       <InformationSections />
+      <OurSoftwareSection />
     </div>
   );
 }

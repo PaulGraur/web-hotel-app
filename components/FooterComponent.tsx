@@ -32,7 +32,7 @@ const FooterComponent: FC = () => {
   ];
 
   return (
-    <footer className="bg-blush/10 py-10 lg:rounded-[24px] lg:mx-[20px] lg:mb-[20px]">
+    <footer className="bg-blush/10 py-10 lg:rounded-[30px] lg:mx-[20px] lg:mb-[20px]">
       <div className="container">
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>

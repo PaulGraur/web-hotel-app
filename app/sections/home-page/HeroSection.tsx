@@ -22,7 +22,7 @@ const HeroSection: FC = () => {
   return (
     <section className="container mt-[60px] xl:mt-[110px]">
       <div className="xl:flex">
-        <div className="flex flex-col items-center xl:items-start xl:mt-[100px]">
+        <div className="flex flex-col items-center xl:items-start xl:mt-[100px] w-[40%]">
           <Typography
             tag="h1"
             align="left"
@@ -57,8 +57,8 @@ const HeroSection: FC = () => {
           </div>
         </div>
 
-        <div className="xl:w-[1500px]">
-          <Image src={hero} alt="hero" />
+        <div className="xl:flex-1 xl:ml-10 flex justify-center xl:justify-end">
+          <Image src={hero} alt="hero" className="w-[55vw] max-w-full h-auto" />
         </div>
       </div>
     </section>
