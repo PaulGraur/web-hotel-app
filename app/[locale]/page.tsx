@@ -7,7 +7,7 @@ import PricingPlanSection from "@/app/sections/home-page/PricingPlanSection";
 
 export default function Home() {
   return (
-    <div className="grid gap-[60px] xl:gap-[180px]">
+    <div className="grid gap-[80px] xl:gap-[180px]">
       <HeroSection />
       <SolutionSection />
       <FeatureSection />

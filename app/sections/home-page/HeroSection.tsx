@@ -23,7 +23,7 @@ const HeroSection: FC = () => {
   return (
     <section className="container mt-[60px] xl:mt-[110px]">
       <div className="xl:flex">
-        <div className="flex flex-col items-center xl:items-start xl:mt-[100px] xl:w-[40%]">
+        <div className="flex flex-col items-start xl:mt-[100px] xl:w-[40%]">
           <Typography
             tag="h1"
             align="left"
