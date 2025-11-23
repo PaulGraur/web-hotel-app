@@ -12,7 +12,7 @@ import LoaderComponent from "@/components/LoaderComponent";
 import { useTranslations } from "next-intl";
 
 import Message from "@/images/contact-us/message.svg";
-import information from "@/images/home-page/information-page/information.png";
+import information from "@/images/home-page/feature-section/feature.png";
 
 const ContactUsSection = () => {
   const t = useTranslations("contactUsPage.contactUsSection");
@@ -201,14 +201,14 @@ const ContactUsSection = () => {
             </form>
           </div>
 
-            <Image
-              src={information}
-              alt="contact us"
-              className="object-cover h-[500px] w-[100%]"
-              height={1320}
-              width={1080}
-              loading="lazy"
-            />
+          <Image
+            src={information}
+            alt="contact us"
+            className="object-cover h-[500px] w-[100%]"
+            height={1320}
+            width={1080}
+            loading="lazy"
+          />
         </div>
 
         {isMobile && showButton && (
