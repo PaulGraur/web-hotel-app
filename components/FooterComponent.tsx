@@ -3,36 +3,33 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 
 const FooterComponent: FC = () => {
-  const t = useTranslations("header.headerNav");
+  const t = useTranslations("header");
   const f = useTranslations("footer");
 
   const navLinks = [
-    { href: "/roadmap", label: t("navRoadmap") },
-    { href: "/courses", label: t("navCourses") },
-    { href: "/map", label: t("navMap") },
-    { href: "/contact-us", label: t("navContactUs") },
-    { href: "/support", label: t("navSupport") },
-    { href: "/account", label: t("navAccount") },
-    { href: "/legal", label: t("navLegal") },
+    { href: "/contact-us", label: t("headerNav.navContactUs") },
+    { href: "/#presentation", label: t("headerNav.navPresentation") },
+    { href: "/#pricing", label: t("headerNav.navPricing") },
+    // { href: "/legal", label: t("navLegal") },
   ];
 
   const socialLinks = [
     {
-      href: "https://facebook.com/homezy",
+      href: "https://facebook.com/SoftPoint",
       label: "Facebook",
     },
     {
-      href: "https://twitter.com/homezy",
+      href: "https://twitter.com/SoftPoint",
       label: "Twitter",
     },
     {
-      href: "https://linkedin.com/company/homezy",
+      href: "https://linkedin.com/company/SoftPoint",
       label: "LinkedIn",
     },
   ];
 
   return (
-    <footer className="bg-blush/10 py-10 rounded-[30px] mx-[12px] mb-[12px] xl:mx-[20px] xl:mb-[20px]">
+    <footer className="bg-blush/10 py-10 rounded-[30px] mx-[10px] mb-[10px] xl:mx-[20px] xl:mb-[20px]">
       <div className="container">
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -57,7 +54,7 @@ const FooterComponent: FC = () => {
               {f("contactTitle")}
             </h3>
             <address className="not-italic space-y-2 text-ebony">
-              <p>Homezy AG</p>
+              <p>Soft Point AG</p>
               <p>Beispielstraße 12</p>
               <p>8000 Zürich, Schweiz</p>
               <p>
@@ -69,10 +66,10 @@ const FooterComponent: FC = () => {
               <p>
                 E-Mail:{" "}
                 <Link
-                  href="mailto:info@homezy.ch"
+                  href="mailto:info@point.at"
                   className="hover:text-yellow-400"
                 >
-                  info@homezy.ch
+                  info@point.ch
                 </Link>
               </p>
             </address>

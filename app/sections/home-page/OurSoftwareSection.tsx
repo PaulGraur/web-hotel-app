@@ -5,8 +5,11 @@ import Image from "next/image";
 import Typography from "@/components/Typography";
 import Button from "@/components/ButtonComponent";
 import laptop from "@/images/home-page/our-software-section/laptop.png";
+import { useTranslations } from "next-intl";
 
 const OurSoftwareSection = () => {
+  const t = useTranslations("homePage.ourSoftwareSection");
+
   return (
     <section
       id="presentation"
@@ -14,20 +17,12 @@ const OurSoftwareSection = () => {
     >
       <div className="container flex xl:relative xl:z-10">
         <div className="xl:w-[40%]">
-          <Typography tag="h2" mb text="Get a presentation of our software" />
-          <Typography
-            tag="p"
-            mb
-            text="The source of powerful qorld and making your future sure. It’s a  straight forward software for you."
-          />
-          <Typography
-            tag="p"
-            mb
-            text="The source of powerful qorld and making future sure. Its a  straight forward software. Paired with dynamic image of the actual tool and the performance."
-          />
+          <Typography tag="h2" mb text={t("ourSoftwareTitle")} />
+          <Typography tag="p" mb text={t("ourSoftwareText1")} />
+          <Typography tag="p" mb text={t("ourSoftwareText2")} />
           <Button
             href="/presentation.pdf"
-            text="Download now"
+            text={t("ourSoftwareButton")}
             variant="filled"
             download
           />

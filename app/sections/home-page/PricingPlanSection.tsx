@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Typography from "@/components/Typography";
 import PricingPlanCard from "@/components/home-page/PricingPlanCard";
+import { useTranslations } from "next-intl";
 
 export interface Plan {
   title: string;
@@ -14,10 +15,12 @@ export interface Plan {
 }
 
 const PricingPlanSection: FC = () => {
+  const t = useTranslations("homePage.pricingPlanSection");
+
   const plans: Plan[] = [
     {
       title: "BASIC PLAN",
-      price: "$50",
+      price: "€50",
       features: [
         { name: "Limited Access Library", available: true },
         { name: "100+ HTML UI Elements", available: false },
@@ -28,7 +31,7 @@ const PricingPlanSection: FC = () => {
     },
     {
       title: "PREMIUM PLAN",
-      price: "$130",
+      price: "€130",
       features: [
         { name: "Limited Access Library", available: true },
         { name: "100+ HTML UI Elements", available: true },
@@ -40,7 +43,7 @@ const PricingPlanSection: FC = () => {
     },
     {
       title: "ULTIMATE PLAN",
-      price: "$250",
+      price: "€250",
       features: [
         { name: "Limited Access Library", available: true },
         { name: "100+ HTML UI Elements", available: true },
@@ -55,14 +58,9 @@ const PricingPlanSection: FC = () => {
     <section id="pricing" className="container mb-[140px]">
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center xl:w-[50%] mb-12">
-          <Typography tag="h2" mb text="Best Pricing Plans" />
-          <Typography
-            tag="p"
-            mb
-            align="center"
-            text="Empowering the Internet Generation. Driving the Communication Revolution. Technology at the speed of life. Empowered by Innovation."
-          />
-          <Typography tag="p" mb text="Save up to 40%" />
+          <Typography tag="h2" mb text={t("pricingPlanTitle")} />
+          <Typography tag="p" mb align="center" text={t("pricingPlanText")} />
+          <Typography tag="p" mb text={t("pricingPlanSaveTo")} />
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">

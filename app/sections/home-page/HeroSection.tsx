@@ -3,7 +3,7 @@ import React, { FC, useState } from "react";
 import Image from "next/image";
 import Typography from "@/components/Typography";
 import Button from "@/components/ButtonComponent";
-import hero from "@/images/home-page/hero-section/hero.svg";
+import hero from "@/images/home-page/hero-section/hero.png";
 
 import { useTranslations } from "next-intl";
 
@@ -29,15 +29,14 @@ const HeroSection: FC = () => {
             align="left"
             mb
             className="text-[#021206]"
-            text="Develop Your Life With One Step..."
+            text={t("heroTitle")}
           />
 
           <Typography
             tag="p"
             mb
             className="text-[#021206]"
-            text="Pushing the possibilities of the internet. Good for
-            the last software. Make it A software night."
+            text={t("heroText")}
           />
 
           <div className="flex items-center bg-white rounded-[30px] shadow-[0_10px_30px_rgba(0,0,0,0.2)] p-2 w-full max-w-[500px]">
@@ -45,12 +44,12 @@ const HeroSection: FC = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder={t("heroInput")}
               className="flex-1 px-2 py-1 bg-transparent outline-none text-gray-700 placeholder:text-gray-400 min-w-0"
             />
 
             <Button
-              text="Send"
+              text={t("heroInputButton")}
               variant="filled"
               onClick={handleSubmit}
               className="px-2 py-2 xl:px-8"
