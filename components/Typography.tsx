@@ -17,7 +17,7 @@ const sizeClasses: Record<string, string> = {
   h3: "text-[24px] lg:text-[32px] leading-[1.3]",
   h4: "text-[20px] lg:text-[28px] leading-[1.3]",
   h5: "text-[18px] lg:text-[18px] leading-[1.3]",
-  p: "text-[22px] lg:text-[22px] leading-[1.6] font-normal",
+  p: "text-[20px] lg:text-[22px] leading-[1.6] font-normal",
 };
 
 const colorClasses = {
