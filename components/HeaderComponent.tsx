@@ -67,7 +67,13 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
     <header className="bg-white shadow-custom-header sticky top-0 z-[1000] rounded-[30px] mt-[10px] mx-[10px] xl:mt-[20px] xl:mx-[20px]">
       <div className="px-[20px] lg:px-[40px]">
         <div className="py-[16px] flex justify-between items-center">
-          <Image src={Logo} alt="Logo" height={40}/>
+          <Link href="/">
+            <Image
+              src={Logo}
+              alt="Logo"
+              className="w-[100%] h-[24px] inline-block"
+            />
+          </Link>
 
           <div className="flex items-center xl:gap-[200px] xxl:gap-[400px]">
             <nav className="hidden xl:flex space-x-6 text-[22px] font-medium">

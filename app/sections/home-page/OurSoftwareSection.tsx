@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Typography from "@/components/Typography";
 import Button from "@/components/ButtonComponent";
