@@ -2,7 +2,7 @@ import LegalSection from "@/app/sections/legal-page/LegalSection ";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Soft Point  - legal",
+  title: "Recepio  - legal",
   description: "Інформація",
   icons: { icon: "@/app/favicon.ico" },
 };

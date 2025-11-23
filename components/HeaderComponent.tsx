@@ -6,7 +6,7 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageChangeComponent from "@/components/LanguageChangeComponent";
-import Logo from "@/components/Logo";
+import Logo from "@/images/logo/Logo.svg";
 import Close from "@/images/vectors/close.svg";
 import Burger from "@/images/vectors/burger.svg";
 
@@ -24,8 +24,8 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navLinks = [
     { href: "/contact-us", label: t("headerNav.navContactUs") },
-    { href: "/#presentation", label: t("headerNav.navPresentation")  },
-    { href: "/#pricing", label: t("headerNav.navPricing")  },
+    { href: "/#presentation", label: t("headerNav.navPresentation") },
+    { href: "/#pricing", label: t("headerNav.navPricing") },
   ];
 
   useEffect(() => {
@@ -67,7 +67,7 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
     <header className="bg-white shadow-custom-header sticky top-0 z-[1000] rounded-[30px] mt-[10px] mx-[10px] xl:mt-[20px] xl:mx-[20px]">
       <div className="px-[20px] lg:px-[40px]">
         <div className="py-[16px] flex justify-between items-center">
-          <Logo />
+          <Image src={Logo} alt="Logo" height={40}/>
 
           <div className="flex items-center xl:gap-[200px] xxl:gap-[400px]">
             <nav className="hidden xl:flex space-x-6 text-[22px] font-medium">

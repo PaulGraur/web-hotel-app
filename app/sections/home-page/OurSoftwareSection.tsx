@@ -19,7 +19,11 @@ const OurSoftwareSection = () => {
         <div className="xl:w-[40%]">
           <Typography tag="h2" mb text={t("ourSoftwareTitle")} />
           <Typography tag="p" mb text={t("ourSoftwareText1")} />
-          <Typography tag="p" mb text={t("ourSoftwareText2")} />
+          <Typography
+            tag="p"
+            className="mb-[60px]"
+            text={t("ourSoftwareText2")}
+          />
           <Button
             href="/presentation.pdf"
             text={t("ourSoftwareButton")}
@@ -29,9 +33,11 @@ const OurSoftwareSection = () => {
         </div>
       </div>
 
-      <div className="xl:absolute xl:right-0 xl:-bottom-28 xl:-translate-y-1/4 xl:z-0 mt-[40px] xl:mt-0">
-        <Image src={laptop} alt="laptop" />
-      </div>
+      <Image
+        src={laptop}
+        alt="laptop"
+        className="xl:absolute xl:right-14 xl:-bottom-28 xl:-translate-y-1/4 xl:z-0 mt-[40px] xl:mt-0 xl:w-[720px]"
+      />
     </section>
   );
 };
