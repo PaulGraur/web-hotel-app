@@ -58,7 +58,7 @@ const HeroSection: FC = () => {
         </div>
 
         <div className="xl:flex-1 xl:ml-10 flex justify-center xl:justify-end">
-          <Image src={hero} alt="hero" className="w-[55vw] max-w-full h-auto" />
+          <Image src={hero} alt="hero" className="max-w-full h-auto" />
         </div>
       </div>
     </section>

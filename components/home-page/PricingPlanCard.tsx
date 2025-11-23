@@ -11,7 +11,7 @@ const PricingPlanCard: FC<{ plan: Plan }> = ({ plan }) => {
   return (
     <div
       className={classNames(
-        "bg-white rounded-[30px] shadow-lg py-[15px] px-[25px] flex flex-col items-center xl:py-[35px] xl:px-[70px]",
+        "bg-white w-[100%] xl:w-max rounded-[30px] shadow-lg py-[15px] px-[25px] flex flex-col items-center xl:py-[35px] xl:px-[70px]",
         plan.className
       )}
     >
@@ -20,11 +20,11 @@ const PricingPlanCard: FC<{ plan: Plan }> = ({ plan }) => {
         <Typography tag="h2" mb text={plan.price} />
       </div>
 
-      <ul className="flex flex-col gap-[20px] mb-[40px] text-[18px] xl:text-[22px] space-y-2 xl:gap-[40px]">
+      <ul className="flex w-[100%] flex-col gap-[20px] mb-[40px] text-[18px] md:w-max xl:text-[22px] space-y-2 xl:gap-[40px]">
         {plan.features.map((feature, index) => (
           <li
             key={index}
-            className="flex gap-[40px] justify-between items-center xl:gap-[60px]"
+            className="flex justify-between items-center md:gap-[60px] lg:gap-[80px]"
           >
             <div className="flex gap-[12px] w-max">
               <Image src={icon} alt="icon" />
