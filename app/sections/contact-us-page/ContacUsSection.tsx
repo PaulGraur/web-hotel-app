@@ -134,13 +134,16 @@ const ContactUsSection = () => {
       {isLoading && <LoaderComponent />}
 
       <section className="bg-white py-[60px] lg:py-[100px] xl:rounded-[24px] xl:mx-[20px]">
-        <div className="container relative flex flex-col items-center mt-[30px] mb-[60px] gap-[50px] lg:gap-0 lg:justify-between lg:flex-row">
-          <div className="flex flex-col gap-[30px] items-center justify-center lg:w-[45%] xl:w-[55%]">
-            <div>
-              <Typography tag="h1" mb text={t("contactUsTitle")} />
+        <div className="container relative flex flex-col items-center mt-[30px] mb-[60px] gap-[50px] lg:gap-0 lg:justify-between xl:flex-row">
+          <div className="flex flex-col gap-[30px] items-center justify-center mb-[40px] xl:mb-0">
+            <Typography
+              tag="h1"
+              align="left"
+              className="w-full"
+              text={t("contactUsTitle")}
+            />
+            <Typography tag="p" text={t("contactUsText")} />
 
-              <Typography tag="p" text={t("contactUsText")} />
-            </div>
             <form
               onSubmit={handleSubmit}
               className="w-full flex flex-col items-center gap-[30px] lg:items-start"
@@ -204,7 +207,7 @@ const ContactUsSection = () => {
           <Image
             src={information}
             alt="contact us"
-            className="object-cover h-[500px] w-[100%]"
+            className="object-cover w-max xl:w-[60%]"
             height={1320}
             width={1080}
             loading="lazy"
