@@ -54,7 +54,7 @@ const FooterComponent: FC = () => {
               {f("contactTitle")}
             </h3>
             <address className="not-italic space-y-2 text-ebony">
-              <p>Soft Point AG</p>
+              <p>Recepio</p>
               <p>Musterstraße 12</p>
               <p>1010 Wien, Österreich</p>
               <p>
