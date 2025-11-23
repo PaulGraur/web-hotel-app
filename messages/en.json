@@ -1,86 +1,74 @@
 {
   "header": {
     "headerNav": {
-      "navRoadmap": "Roadmap",
-      "navIntegrationMap": "Integration map",
-      "navDocuments": "Documentation",
-      "navCourses": "Courses",
-      "navMap": "Map",
       "navContactUs": "Contact us",
-      "navSupport": "Support",
-      "navAccount": "Profile",
-      "navLegal": "Privacy Policy"
-    },
-    "headerProfile": {
-      "profile": "Profile",
-      "signIn": "Sign In"
-    },
-    "headerSearch": {
-      "searchInput": "Search...",
-      "searchResult": "Nothing found"
+      "navPresentation": "Presentation",
+      "navPricing": "Pricing"
     }
   },
 
-  "loginForm": {
-    "loginWelcome": "Welcome! Log in to your account",
-    "loginExistingAccount": "Log in to your existing account to check current orders and more",
-    "loginRemember": "Remember me",
-    "loginForgot": "Forgot password",
-    "loginQuickAuthorization": "Quick authorization",
-    "signIn": "Sign in",
-    "register": "Register",
-    "loginFirstTime": "First time on Homezy",
-    "LoginCreate": "Create an account",
-    "loginAllAttempts": "You have exhausted all attempts.",
-    "loginAttemptsLeft": "Attempts left",
-    "LoginGoOut": "Go out",
+  "homePage": {
+    "heroSection": {
+      "heroTitle": "Develop Your Life With One Step...",
+      "heroText": "Pushing the possibilities of the internet. Good for the last software. Make it A software night.",
+      "heroInput": "Enter your email",
+      "heroInputButton": "Send"
+    },
 
-    "notAuthorized": "You are not logged in. Please log in to continue.",
-    "personalAccount": "Personal Account",
-    "profile": "Profile",
-    "documentHistory": "Document History",
+    "solutionSection": {
+      "solutionTitle": "A complete software solution for you.",
+      "solutionText1": "The source of powerful qorld and making future sure. Its a straight forward software.",
+      "solutionText2": "Where possibilities are made possible. We must have expand Possibilities of better tomorrow. The directly secure of your network deliveing services.",
+      "solutionButton1": "Learn more",
+      "solutionButton2": "Ask?",
 
-    "months": {
-      "january": "January",
-      "february": "February",
-      "march": "March",
-      "april": "April",
-      "may": "May",
-      "june": "June",
-      "july": "July",
-      "august": "August",
-      "september": "September",
-      "october": "October",
-      "november": "November",
-      "december": "December"
-    }
-  },
+      "cardEasySettings": {
+        "title": "Easy Settings",
+        "text": "A complete about-face in core economic amsterday bilamco progressive."
+      },
+      "cardUserFriendly": {
+        "title": "User Friendly",
+        "text": "A complete about-face in core economic amsterday bilamco progressive."
+      },
+      "cardFullSecured": {
+        "title": "Full Secured",
+        "text": "A complete about-face in core economic amsterday bilamco progressive."
+      },
+      "cardCleanCode": {
+        "title": "Clean Code",
+        "text": "A complete about-face in core economic amsterday bilamco progressive."
+      }
+    },
 
-  "accountSection": {
-    "accountGreeting": "Hello",
-    "accountWelcome": "Welcome to your dashboard — your one-stop center for all your latest account activities",
-    "accountMyInfo": "My Information",
-    "accountMyAddress": "My Address",
-    "accountNewPassword": "New Password",
-    "accountLatestInformation": "Receive the latest information",
-    "linkedAccounts": "Linked accounts",
-    "accountTieUp": "Link",
-    "accountButton": "Update",
+    "featureSection": {
+      "featureTitle": "Discover & growth with analysis.",
+      "featureText": "Software with new dimensions. The better future and information about the virtual world.",
 
-    "inputs": {
-      "name": "First name",
-      "lastName": "Last name",
-      "dateOfBirth": "Date of birth",
-      "email": "Email",
-      "confirmEmail": "Confirm email",
-      "phoneNumber": "Phone number",
-      "month": "Month",
-      "day": "Day",
-      "chooseSettlement": "Select locality",
-      "street": "Street, house/apartment",
-      "password": "Password",
-      "yourPassword": "Your password",
-      "confirmPassword": "Confirm password"
+      "featureList": {
+        "featureItem1": "Software with new dimensions the better.",
+        "featureItem2": "Effortlessly manages all your information.",
+        "featureItem3": "Simple Solutions for Complex Connections.",
+        "featureItem4": "Complete business solutions for customers."
+      }
+    },
+
+    "informationSections": {
+      "informationTitle": "Serving information with security.",
+      "informationtext1": "The source of powerful qorld and making future sure. Its a straight forward software. Paired with dynamic image of the actual tool for you.",
+      "informationtext2": "Where possibilities are made possible. We must have expand Possibilities of better tomorrow. The directly secure of your network deliveing services."
+    },
+
+    "ourSoftwareSection": {
+      "ourSoftwareTitle": "Get a presentation of our software",
+      "ourSoftwareText1": "The source of powerful qorld and making your future sure. It’s a straight forward software for you.",
+      "ourSoftwareText2": "The source of powerful qorld and making future sure. Its a straight forward software. Paired with dynamic image of the actual tool and the performance.",
+      "ourSoftwareButton": "Download now"
+    },
+
+    "pricingPlanSection": {
+      "pricingPlanTitle": "Best Pricing Plans",
+      "pricingPlanText": "Empowering the Internet Generation. Driving the Communication Revolution. Technology at the speed of life. Empowered by Innovation.",
+      "pricingPlanSaveTo": "Save up to 40%"
     }
   },
 
@@ -89,171 +77,6 @@
     "contactTitle": "Contact",
     "officesTitle": "Offices",
     "socialTitle": "We on Social Media",
-    "rightsTitle": "© 2025 Homezy AG. All rights reserved."
-  },
-
-  "homePage": {
-    "heroSection": {
-      "heroTitle": "Personalized Integration Platform for Life in Switzerland",
-      "heroInfo": "Instead of bureaucratic chaos – clear roadmap, templates, support, and training tailored exactly for you.",
-      "heroButton": "Start Integration"
-    },
-    "rewiewSection": {
-      "rewiewTitle": "Reviews from our users"
-    }
-  },
-
-  "libraryPage": {
-    "categoriesSection": {
-      "categoriesTitle": "Library Categories",
-      "categoriesCard1": {
-        "categoriesTitle": "Rental Agreements (Mietvertrag)",
-        "categoriesDescription": "Templates and explanations of housing rental agreements in Switzerland."
-      },
-      "categoriesCard2": {
-        "categoriesTitle": "Permit Applications",
-        "categoriesDescription": "Forms and instructions for obtaining residence, work permits, etc."
-      },
-      "categoriesCard3": {
-        "categoriesTitle": "Letters to the Municipality",
-        "categoriesDescription": "Sample letters for communication with government authorities."
-      },
-      "categoriesCard4": {
-        "categoriesTitle": "CV / Motivation Letter Examples",
-        "categoriesDescription": "Ready-made examples and templates for CVs and motivation letters."
-      },
-      "categoriesCard5": {
-        "categoriesTitle": "Bank Documents",
-        "categoriesDescription": "Templates and translations of documents for opening accounts, loans, etc."
-      },
-      "categoriesCard6": {
-        "categoriesTitle": "Insurance",
-        "categoriesDescription": "Documents and templates for insurance companies."
-      },
-      "categoriesCard7": {
-        "categoriesTitle": "Taxes",
-        "categoriesDescription": "Examples of tax declarations, forms, and explanations of tax terms."
-      }
-    },
-
-    "formatSection": {
-      "title": "Document Format",
-      "description": "All documents in our library are provided in PDF format with online preview. This allows viewing content without the need to download, which is convenient and saves time.",
-      "commentsSection": {
-        "title": "Comments and Explanations",
-        "description": "Each field in the document is accompanied by detailed comments and explanations that help fill out the form correctly and avoid mistakes. This is especially important for legal and official documents."
-      },
-      "translationsSection": {
-        "title": "Translations",
-        "description": "For greater convenience, we provide translations of key documents and forms into Ukrainian, English, and other languages. It is especially important that original documents are often available in German or French — we provide accurate translations for better understanding.",
-        "list": [
-          "German → Ukrainian / English",
-          "French → Ukrainian / English",
-          "Other languages as needed"
-        ]
-      },
-      "accessibilitySection": {
-        "title": "Convenience and Accessibility",
-        "description": "Our documents are adapted for use on both desktops and mobile devices. The online preview is integrated directly on the site, making working with documents fast and comfortable."
-      }
-    }
-  },
-
-  "integrationMapPage": {
-    "integrationMapSection": {
-      "integrationTitle": "Directory of Services and Locations",
-      "integrationPhone": "Phone: ",
-      "integrationEmail": "Email: ",
-      "integrationSchedule": "Schedule: ",
-      "integrationSite": "Website",
-      "integrationRoute": "Get directions",
-      "integrationSignUp": "Sign Up"
-    }
-  },
-
-  "coursesPage": {
-    "coursesSection": {
-      "coursesTitle": "Courses and training programs"
-    },
-    "coursesMapSection": {
-      "coursesMapTitle": "Language schools in the canton of Zurich"
-    }
-  },
-
-  "contactUsPage": {
-    "contactUsSection": {
-      "contactUsTitle": "Contact Us",
-      "contactUsText": "If you have any questions, suggestions, or need assistance, please contact us. We’re always happy to help!",
-      "contactUsAttempts": "You have used all your attempts!",
-      "contactUsAttemptsLeft": "Attempts left:",
-      "contactUsName": "Name",
-      "contactUsMessage": "Message",
-      "contactUsSend": "Send",
-      "contactUsTelegram": "Message us on Telegram for quick assistance!"
-    }
-  },
-
-  "roadmapPage": {
-    "roadmapHeroSection": {
-      "roadmapHeroTitle": "Integration Roadmap",
-      "roadmapHeroText": "A key functional module providing step-by-step instructions for migrant integration in Switzerland."
-    },
-    "roadmapHeroNav": {
-      "roadmapHeroNavTitle": "Navigation by Sections",
-      "roadmapHeroNavIntegration": "Integration",
-      "roadmapHeroNavMove": "Arrival / Move",
-      "roadmapHeroNavHouse": "Housing",
-      "roadmapHeroNavJob": "Work / Education",
-      "roadmapHeroNavLanguage": "Language",
-      "roadmapHeroNavMedicine": "Medicine",
-      "roadmapHeroNavFinance": "Finance"
-    },
-    "integrationSection": {
-      "integrationTitle": "Integration"
-    },
-    "arrivalSection": {
-      "arrivalTitle": "Arrival / Moving"
-    },
-    "housingSection": {
-      "housingTitle": "Housing in Switzerland"
-    },
-    "workEducationSection": {
-      "workEducationTitle": "Work / Education in Switzerland"
-    },
-    "languageSection": {
-      "languageTitle": "Language"
-    },
-    "medicineSection": {
-      "medicineTitle": "Medicine",
-      "insuranceTitle": "Insurance (Krankenkasse)",
-      "insuranceText": "Health insurance is mandatory from the first day of your stay in Switzerland. You can compare rates and choose insurance on Comparis.ch.",
-      "familyDoctorTitle": "Family Doctor",
-      "familyDoctorText": "It is recommended to find a family doctor near your place of residence. Use the map below with blue markers for this.",
-      "pharmaciesTitle": "Pharmacies, Emergency Care",
-      "emergencyText": "For emergency medical assistance, call 144. Pharmacies are marked with green markers on the map.",
-      "pharmaciesDetailsText": "Details of the nearest pharmacies can also be found on your canton’s websites or using OpenStreetMap."
-    },
-    "financeSection": {
-      "financeTitle": "Finances"
-    }
-  },
-
-  "categoryDetailsSection": {
-    "categorySubTitle": "Documents and resources",
-    "categoryFillDetails": "Fill in the details",
-    "categoryView": "View explanation",
-    "passportData": "Passport data",
-    "categoryDownload": "Download document",
-    "categoryDownloadPDF": "Download PDF",
-    "openButton": "Open form",
-    "сancelButton": "Cancel"
-  },
-
-  "legalPage": {
-    "legalSection": {
-      "legalTitle": "Need help?",
-      "legalText": "If you have any questions or need advice, please contact our support service.",
-      "legalButton": "Contact us"
-    }
+    "rightsTitle": "© 2025 Soft Point AG. All rights reserved."
   }
 }

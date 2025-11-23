@@ -105,7 +105,7 @@ const LanguageChangeComponent: FC<LanguageProps> = ({ className }) => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute bg-blush px-[14px] py-[20px] flex flex-col items-center gap-[8px] right-[0] w-max shadow-2xl rounded-[30px]"
+              className="absolute bg-blush px-[14px] py-[20px] flex flex-col items-center gap-[8px] -right-[12px] xl:right-[0] w-max shadow-2xl rounded-[30px]"
             >
               {countriesMenu.map((country) => {
                 if (country !== selectedCountry) {

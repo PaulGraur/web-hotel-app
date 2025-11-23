@@ -24,8 +24,8 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navLinks = [
     { href: "/contact-us", label: t("headerNav.navContactUs") },
-    { href: "/#presentation", label: "Presentation" },
-    { href: "/#pricing", label: "Pricing" },
+    { href: "/#presentation", label: t("headerNav.navPresentation")  },
+    { href: "/#pricing", label: t("headerNav.navPricing")  },
   ];
 
   useEffect(() => {
@@ -64,8 +64,8 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
   }, []);
 
   return (
-    <header className="bg-white shadow-custom-header sticky top-0 z-[1000] rounded-[30px] mt-[12px] mx-[12px] xl:mt-[20px] xl:mx-[20px]">
-      <div className="px-[10px] lg:px-[40px]">
+    <header className="bg-white shadow-custom-header sticky top-0 z-[1000] rounded-[30px] mt-[10px] mx-[10px] xl:mt-[20px] xl:mx-[20px]">
+      <div className="px-[20px] lg:px-[40px]">
         <div className="py-[16px] flex justify-between items-center">
           <Logo />
 
@@ -111,7 +111,7 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
                 animate="visible"
                 exit="hidden"
                 variants={dropDownVariants}
-                className="fixed rounded-[30px] mx-[15px] top-[90px] left-0 right-0 bg-white border-t border-charcoal/50 z-[1200] overflow-hidden"
+                className="fixed rounded-[30px] mx-[10px] top-[90px] left-0 right-0 bg-white border-t border-charcoal/50 z-[1200] overflow-hidden"
               >
                 <div className="flex flex-col gap-[20px] px-[16px] py-[32px] text-[22px] font-medium">
                   <div className="flex items-center justify-between">
