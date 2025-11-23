@@ -10,7 +10,7 @@ const FooterComponent: FC = () => {
     { href: "/contact-us", label: t("headerNav.navContactUs") },
     { href: "/#presentation", label: t("headerNav.navPresentation") },
     { href: "/#pricing", label: t("headerNav.navPricing") },
-    // { href: "/legal", label: t("navLegal") },
+    { href: "/legal", label: t("headerNav.navLegal") },
   ];
 
   const socialLinks = [
@@ -41,7 +41,7 @@ const FooterComponent: FC = () => {
                 <Link
                   key={href}
                   href={href}
-                  className="relative w-max hover:text-yellow-400 transition-colors duration-300 ease-in-out after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-yellow-400 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                  className="relative w-max hover:text-crimson transition-colors duration-300 ease-in-out after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-crimson hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
                 >
                   {label}
                 </Link>
@@ -55,11 +55,11 @@ const FooterComponent: FC = () => {
             </h3>
             <address className="not-italic space-y-2 text-ebony">
               <p>Soft Point AG</p>
-              <p>Beispielstraße 12</p>
-              <p>8000 Zürich, Schweiz</p>
+              <p>Musterstraße 12</p>
+              <p>1010 Wien, Österreich</p>
               <p>
                 Telefon:{" "}
-                <Link href="tel:+41445556677" className="hover:text-yellow-400">
+                <Link href="tel:+41445556677" className="hover:text-crimson">
                   +41 44 555 66 77
                 </Link>
               </p>
@@ -67,7 +67,7 @@ const FooterComponent: FC = () => {
                 E-Mail:{" "}
                 <Link
                   href="mailto:info@point.at"
-                  className="hover:text-yellow-400"
+                  className="hover:text-crimson"
                 >
                   info@point.ch
                 </Link>
@@ -97,7 +97,7 @@ const FooterComponent: FC = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative hover:text-yellow-400 transition-colors duration-300 ease-in-out after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-yellow-400 hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                    className="relative hover:text-crimson transition-colors duration-300 ease-in-out after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-crimson hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
                   >
                     {label}
                   </Link>

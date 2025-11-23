@@ -3,7 +3,8 @@
     "headerNav": {
       "navContactUs": "Kontakt",
       "navPresentation": "Präsentation",
-      "navPricing": "Preise"
+      "navPricing": "Preise",
+      "navLegal": "Datenschutz"
     }
   },
 
@@ -69,6 +70,45 @@
       "pricingPlanTitle": "Beste Preispläne",
       "pricingPlanText": "Innovation, die die digitale Generation stärkt. Technologie im Rhythmus des Lebens.",
       "pricingPlanSaveTo": "Spare bis zu 40 %"
+    }
+  },
+
+  "contactUsPage": {
+    "contactUsSection": {
+      "contactUsTitle": "Kontaktieren Sie uns",
+      "contactUsText": "Wenn Sie Fragen, Vorschläge haben oder Hilfe benötigen, kontaktieren Sie uns bitte. Wir helfen Ihnen jederzeit gerne weiter!",
+      "contactUsAttempts": "Sie haben alle Versuche aufgebraucht!",
+      "contactUsAttemptsLeft": "Verbleibende Versuche:",
+      "contactUsName": "Name",
+      "contactUsMessage": "Nachricht",
+      "contactUsSend": "Senden",
+      "contactUsTelegram": "Schreiben Sie uns auf Telegram für schnelle Unterstützung!"
+    }
+  },
+
+  "legalPage": {
+    "legalSection": {
+      "legalTitle": "Brauchen Sie Hilfe?",
+      "legalText": "Wenn Sie Fragen haben oder Rat benötigen, wenden Sie sich bitte an unseren Kundendienst.",
+      "legalButton": "Kontaktieren Sie uns"
+    },
+    "privacyPolicy": {
+      "title": "Datenschutzrichtlinie",
+      "lastUpdated": "Zuletzt aktualisiert: November 2025",
+      "intro": "Diese Datenschutzrichtlinie erläutert ausführlich, wie Homezy AG Ihre personenbezogenen Daten sammelt, verarbeitet, speichert und schützt, wenn Sie unsere Website, Anwendungen oder Dienste nutzen. Sie wurde erstellt, um den Anforderungen der Europäischen Datenschutz-Grundverordnung (DSGVO) und des österreichischen Datenschutzgesetzes (DSG) zu entsprechen. Wir verpflichten uns, Ihre Privatsphäre jederzeit transparent, sicher und verantwortungsvoll zu behandeln.",
+      "dataCollection": "Wir können folgende Kategorien personenbezogener Daten erfassen:\n\n1. **Identitäts- und Kontaktdaten**: Name, Adresse, E-Mail, Telefonnummer, Firmenname, Berufsbezeichnung.\n2. **Konto- und Logininformationen**: Benutzername, Passwort, Login-Historie.\n3. **Transaktionsdaten**: Nutzung unserer Dienste, Käufe, Zahlungen und zugehörige Abrechnungsinformationen.\n4. **Technische Daten**: IP-Adresse, Gerätetyp, Browsertyp, Betriebssystem, besuchte Seiten, Sitzungsdauer, Klickpfade, Cookies.\n5. **Kommunikationsdaten**: Nachrichten, Anfragen, Feedback und andere von Ihnen übermittelte Informationen.\n6. **Marketing- und Analysedaten**: Präferenzen, Interessen, Interaktionen mit Kampagnen, Analysedaten zur Verbesserung der Website.\n7. **Besondere Kategorien personenbezogener Daten**: Nur wenn freiwillig bereitgestellt (z. B. gesundheitsbezogene Daten), mit ausdrücklicher Einwilligung verarbeitet.",
+      "dataUse": "Ihre personenbezogenen Daten werden zu folgenden Zwecken verarbeitet:\n\n- Bereitstellung, Wartung und Verbesserung unserer Dienste, einschließlich Kontoverwaltung und Kundenservice.\n- Einhaltung gesetzlicher und regulatorischer Verpflichtungen.\n- Verhinderung von Betrug, Missbrauch oder illegalen Aktivitäten.\n- Personalisierung der Benutzererfahrung und Bereitstellung relevanter Inhalte und Werbung.\n- Durchführung von Forschung und Analysen zur Verbesserung unserer Dienstleistungen.\n- Kommunikation von Updates, Angeboten, Newslettern oder Marketingmaterialien, sofern Sie eingewilligt haben.\n- Verwaltung von Beziehungen zu Partnern, Affiliate-Diensten und Dienstleistern für betriebliche Zwecke.\n\nDie Verarbeitung basiert auf einer oder mehreren der folgenden Rechtsgrundlagen: Einwilligung, Vertragserfüllung, gesetzliche Verpflichtung, berechtigtes Interesse oder lebenswichtige Interessen, falls zutreffend.",
+      "cookies": "Wir verwenden Cookies und ähnliche Technologien, um die Benutzererfahrung zu verbessern, die Website-Performance zu messen und Marketingaktivitäten zu unterstützen. Cookie-Kategorien:\n\n- **Unbedingt erforderliche Cookies**: notwendig für die grundlegende Funktionalität der Website.\n- **Performance-Cookies**: zur Überwachung der Nutzung und Verbesserung der Website.\n- **Funktions-Cookies**: Speicherung von Präferenzen und Einstellungen.\n- **Marketing-/Targeting-Cookies**: Bereitstellung relevanter Werbung und Verfolgung der Kampagnenleistung.\n\nSie können Cookies über Ihre Browsereinstellungen oder unser Cookie-Management-Tool steuern. Das Blockieren bestimmter Cookies kann die Funktionalität der Website einschränken.",
+      "dataRetention": "Wir speichern personenbezogene Daten nur so lange, wie es für die Zwecke, für die sie erhoben wurden, erforderlich ist oder gesetzlich vorgeschrieben ist. Die Aufbewahrungsfristen variieren je nach Datentyp, gesetzlichen Anforderungen und geschäftlichen Notwendigkeiten. Regelmäßig überprüfen wir gespeicherte Daten und löschen oder anonymisieren Informationen, die nicht mehr benötigt werden.",
+      "dataSecurity": "Wir setzen angemessene technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten ein, einschließlich:\n- Verschlüsselung während der Übertragung (TLS/SSL) und im Ruhezustand.\n- Firewalls, Intrusion Detection und Zugangskontrollen.\n- Regelmäßige Sicherheitsüberprüfungen, Schwachstellenanalysen und Penetrationstests.\n- Mitarbeiterschulungen zum Datenschutz und zur Vertraulichkeit.\n- Sicheres Backup-Management und Notfallwiederherstellungsverfahren.",
+      "dataRights": "Gemäß DSGVO haben Sie folgende Rechte:\n\n- **Auskunftsrecht**: Zugang zu Ihren personenbezogenen Daten verlangen.\n- **Recht auf Berichtigung**: Unrichtige oder unvollständige Daten korrigieren lassen.\n- **Recht auf Löschung**: Daten löschen lassen, soweit gesetzlich zulässig.\n- **Recht auf Einschränkung der Verarbeitung**: Verarbeitung unter bestimmten Bedingungen einschränken.\n- **Recht auf Datenübertragbarkeit**: Daten in einem strukturierten, gängigen Format erhalten und übertragen.\n- **Widerspruchsrecht**: der Verarbeitung aus berechtigten Interessen oder Direktmarketing widersprechen.\n- **Widerrufsrecht der Einwilligung**: jederzeit Einwilligung für die Verarbeitung widerrufen.\n- **Beschwerderecht**: Beschwerde bei der Österreichischen Datenschutzbehörde (DSB) einreichen.",
+      "dataTransfer": "Daten können an Dienstleister oder Partner innerhalb des Europäischen Wirtschaftsraums (EWR) übertragen werden. Übertragungen außerhalb des EWR erfolgen nur mit geeigneten Schutzmaßnahmen, wie z. B. Standardvertragsklauseln, um ein angemessenes Schutzniveau sicherzustellen.",
+      "automatedDecisionMaking": "Wir verwenden keine personenbezogenen Daten für automatisierte Entscheidungsfindung oder Profiling, das rechtliche Auswirkungen hat oder Sie erheblich beeinflusst, außer wenn dies ausdrücklich angegeben und zugestimmt wurde.",
+      "marketing": "Personenbezogene Daten werden nur für Direktmarketing verwendet, wenn Sie ausdrücklich eingewilligt haben. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie uns kontaktieren oder die Abmeldelinks in Marketingkommunikationen nutzen.",
+      "thirdPartyServices": "Wir teilen personenbezogene Daten nur mit vertrauenswürdigen Drittanbietern für Hosting, Analysen, Zahlungsabwicklung, Marketing und Kundenservice. Alle Drittanbieter sind vertraglich verpflichtet, Ihre Daten zu schützen und nur für den vorgesehenen Zweck zu verwenden.",
+      "childrenPrivacy": "Unsere Dienste richten sich nicht an Kinder unter 16 Jahren. Wir sammeln wissentlich keine personenbezogenen Daten von Kindern. Sollten versehentlich Daten von Kindern erfasst werden, werden diese umgehend gelöscht.",
+      "policyUpdates": "Wir können diese Datenschutzrichtlinie regelmäßig aktualisieren. Änderungen werden auf dieser Seite mit dem neuen \"Zuletzt aktualisiert\"-Datum veröffentlicht. Wesentliche Änderungen können zusätzlich per E-Mail oder Website-Benachrichtigung mitgeteilt werden.",
+      "contactInfo": "Wenn Sie Fragen zur Verarbeitung Ihrer personenbezogenen Daten haben oder Ihre Rechte ausüben möchten, kontaktieren Sie uns bitte:\n\nHomezy AG\nE-Mail: privacy@homezy.com\nAdresse: [Ihre Firmenadresse], Österreich\nTelefon: [Ihre Telefonnummer]\nDatenschutzbeauftragter: dpo@homezy.com"
     }
   },
 
