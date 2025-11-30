@@ -1,4 +1,4 @@
-import React, { FC, ElementType } from "react";
+import React, { FC, ElementType, CSSProperties } from "react";
 
 interface TypographyProps {
   tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "p";
@@ -6,6 +6,7 @@ interface TypographyProps {
   mt?: boolean;
   text: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
   color?: "ebony" | "white";
   align?: "left" | "center" | "right";
   fontWeight?: "normal" | "medium" | "semibold" | "bold" | "extrabold";
@@ -61,6 +62,7 @@ const Typography: FC<TypographyProps> = ({
   mt = false,
   text,
   className = "",
+  style,
   color = "ebony",
   align = "left",
   fontWeight = "extrabold",
@@ -81,7 +83,11 @@ const Typography: FC<TypographyProps> = ({
     .join(" ")
     .trim();
 
-  return <Tag className={combinedClassName}>{text}</Tag>;
+  return (
+    <Tag className={combinedClassName} style={style}>
+      {text}
+    </Tag>
+  );
 };
 
 export default Typography;

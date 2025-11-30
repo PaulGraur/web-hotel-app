@@ -14,8 +14,9 @@ const FeatureSection = () => {
     { text: t("featureList.featureItem3") },
     { text: t("featureList.featureItem4") },
   ];
+  
   return (
-    <section className="container">
+    <section id="feature" className="container">
       <div className="flex flex-col xl:flex-row justify-between">
         <div className="xl:mt-[80px]">
           <Typography tag="h2" mb text={t("featureTitle")} />

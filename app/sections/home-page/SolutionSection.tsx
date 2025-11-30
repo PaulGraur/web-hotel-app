@@ -1,14 +1,15 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 import Typography from "@/components/Typography";
 import SolutionCard from "@/components/home-page/SolutionCardComponent";
 import Button from "@/components/ButtonComponent";
 
-import easy from "@/images/home-page/solution-cart/easy.svg";
-import friendly from "@/images/home-page/solution-cart/friendly.svg";
-import secured from "@/images/home-page/solution-cart/secured.svg";
-import clean from "@/images/home-page/solution-cart/clean.svg";
+import register from "@/images/home-page/solution-cart/register.svg";
+import legal from "@/images/home-page/solution-cart/legal.svg";
+import data from "@/images/home-page/solution-cart/data.svg";
+import fileShredder from "@/images/home-page/solution-cart/file-shredder.svg";
+
 import { useTranslations } from "next-intl";
 
 const SolutionSection = () => {
@@ -16,32 +17,32 @@ const SolutionSection = () => {
 
   const cardData = [
     {
-      src: easy,
-      alt: "Easy Settings",
+      src: register,
+      alt: t("cardEasySettings.title"),
       title: t("cardEasySettings.title"),
       text: t("cardEasySettings.text"),
       background: "linear-gradient(135deg, #FF9A9A, #F14C4C)",
       shadowColor: "rgba(241, 76, 76, 0.5)",
     },
     {
-      src: friendly,
-      alt: "User Friendly",
+      src: legal,
+      alt: t("cardUserFriendly.title"),
       title: t("cardUserFriendly.title"),
       text: t("cardUserFriendly.text"),
       background: "linear-gradient(135deg, #FFE49A, #F18C4C)",
       shadowColor: "rgba(241, 140, 76, 0.5)",
     },
     {
-      src: secured,
-      alt: "Full secured",
+      src: data,
+      alt: t("cardFullSecured.title"),
       title: t("cardFullSecured.title"),
       text: t("cardFullSecured.text"),
       background: "linear-gradient(135deg, #FCD876, #FABC13)",
       shadowColor: "rgba(250, 188, 19, 0.5)",
     },
     {
-      src: clean,
-      alt: "Clean Code",
+      src: fileShredder,
+      alt: t("cardCleanCode.title"),
       title: t("cardCleanCode.title"),
       text: t("cardCleanCode.text"),
       background: "linear-gradient(135deg, #FE9AF4, #EC4EDC)",
@@ -71,9 +72,16 @@ const SolutionSection = () => {
           <Typography tag="p" text={t("solutionText2")} />
 
           <div className="flex items-center gap-[25px] mt-[30px]">
-            <Button text={t("solutionButton1")} variant="filled" />
+            <Button
+              href="#feature"
+              text={t("solutionButton1")}
+              variant="filled"
+            />
 
-            <Link href="/" className="font-bold text-[22px] text-crimson">
+            <Link
+              href="/contact-us"
+              className="font-bold text-[22px] text-crimson"
+            >
               {t("solutionButton2")}
             </Link>
           </div>

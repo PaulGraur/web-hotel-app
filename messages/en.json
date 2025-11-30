@@ -10,8 +10,8 @@
 
   "homePage": {
     "heroSection": {
-      "heroTitle": "Develop Your Life With One Step...",
-      "heroText": "Pushing the possibilities of the internet. Good for the last software. Make it A software night.",
+      "heroTitle": "Faster Check-In. Happier Guests.",
+      "heroText": "Guests fill and sign the registration form on their phone — your staff gets the data instantly. No paper. No waiting. No mistakes.",
       "heroInput": "Enter your email",
       "heroInputButton": "Send"
     },
@@ -24,20 +24,20 @@
       "solutionButton2": "Ask?",
 
       "cardEasySettings": {
-        "title": "Easy Settings",
-        "text": "A complete about-face in core economic amsterday bilamco progressive."
+        "title": "Faster Check-In",
+        "text": "Guests fill out the form on their phone in seconds, so staff don't waste time on paperwork."
       },
       "cardUserFriendly": {
-        "title": "User Friendly",
-        "text": "A complete about-face in core economic amsterday bilamco progressive."
+        "title": "Legally Valid Signatures",
+        "text": "The signature is digitally collected and stored in accordance with Austrian law. Everything is secure and official."
       },
       "cardFullSecured": {
-        "title": "Full Secured",
-        "text": "A complete about-face in core economic amsterday bilamco progressive."
+        "title": "All Data in One Place",
+        "text": "All guest records are automatically saved in the admin panel. Easy search, filters, export - without complicated systems."
       },
       "cardCleanCode": {
-        "title": "Clean Code",
-        "text": "A complete about-face in core economic amsterday bilamco progressive."
+        "title": "No Paper, No Mistakes",
+        "text": "No printed forms or manual input. Fewer errors, cleaner data — full control for the manager."
       }
     },
 
@@ -69,7 +69,29 @@
     "pricingPlanSection": {
       "pricingPlanTitle": "Best Pricing Plans",
       "pricingPlanText": "Empowering the Internet Generation. Driving the Communication Revolution. Technology at the speed of life. Empowered by Innovation.",
-      "pricingPlanSaveTo": "Save up to 40%"
+
+      "pricingCard": {
+        "pricingTitle": {
+          "title1": "BASIC PLAN",
+          "title2": "PREMIUM PLAN",
+          "title3": "ULTIMATE PLAN"
+        },
+
+        "pricingFeatures": {
+          "item1": "Administrator Access",
+          "item2": "Online Check-in Form",
+          "item3": "Guest Signature",
+          "item4": "Multilingual",
+          "item5": "Personal Data Collection and PDF Export",
+          "item6": "Unlimited Rooms",
+          "item7": "Advanced Admin Management",
+          "item8": "Hotel Branding",
+          "item9": "24/7 Priority Support",
+          "item10": "Personal Manager"
+        },
+
+        "pricingButton": "Buy Plan"
+      }
     }
   },
 
