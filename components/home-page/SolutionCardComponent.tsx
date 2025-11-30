@@ -20,7 +20,7 @@ const SolutionCardComponent: FC<CardProps> = ({
   shadowColor,
 }) => {
   return (
-    <div className="flex flex-col items-start p-[20px] border rounded-[30px] transition-all duration-300 hover:shadow-lg hover:border-transparent xl:p-[35px]">
+    <div className="flex flex-col items-start p-[20px] border border-[#D79B9B80] rounded-[30px] transition-all duration-300 hover:shadow-lg hover:border-transparent xl:p-[35px]">
       <div
         className="rounded-[30px] mb-[25px] p-[25px]"
         style={{

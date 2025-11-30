@@ -11,27 +11,33 @@ const PricingPlanCard: FC<{ plan: Plan }> = ({ plan }) => {
   return (
     <div
       className={classNames(
-        "bg-white w-[100%] xl:w-max rounded-[30px] shadow-lg py-[15px] px-[25px] flex flex-col items-center xl:py-[35px] xl:px-[70px]",
+        "bg-white rounded-[30px] shadow-lg py-[15px] px-[25px] flex flex-col items-center xl:py-[35px] xl:px-[30px]",
         plan.className
       )}
     >
       <div className="flex flex-col items-center">
-        <Typography tag="h4" mb text={plan.title} className="text-ebony/50" />
+        <Typography
+          tag="h4"
+          mb
+          text={plan.title}
+          className="text-ebony/50 font-semibold"
+        />
         <Typography tag="h2" mb text={plan.price} />
       </div>
 
-      <ul className="flex w-[100%] flex-col gap-[20px] mb-[40px] text-[18px] md:w-max xl:text-[22px] space-y-2 xl:gap-[40px]">
+      <ul className="flex flex-wrap flex-col gap-[20px] mb-[40px] text-[18px] xl:text-[22px] xl:gap-[12px]">
         {plan.features.map((feature, index) => (
           <li
             key={index}
             className="flex justify-between items-center md:gap-[60px] lg:gap-[80px]"
           >
-            <div className="flex gap-[12px] w-max">
+            <div className="flex gap-[12px] ">
               <Image src={icon} alt="icon" />
+
               <p
                 className={`${
-                  feature.available ? "" : "text-gray-400 line-through w-max"
-                }`}
+                  feature.available ? "" : "text-gray-400 line-through"
+                } break-words`}
               >
                 {feature.name}
               </p>
@@ -39,7 +45,7 @@ const PricingPlanCard: FC<{ plan: Plan }> = ({ plan }) => {
 
             <p
               className={`font-bold ${
-                feature.available ? "text-ebony" : "text-gray-400"
+                feature.available ? "text-ebony" : "text-gray-400 "
               }`}
             >
               {feature.available ? "Yes" : "No"}
@@ -48,7 +54,7 @@ const PricingPlanCard: FC<{ plan: Plan }> = ({ plan }) => {
         ))}
       </ul>
 
-      <Button text={plan.actionLabel} variant="outline" />
+      <Button text={plan.actionLabel} variant="outline" className="mt-auto" />
     </div>
   );
 };

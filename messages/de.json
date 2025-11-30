@@ -10,8 +10,8 @@
 
   "homePage": {
     "heroSection": {
-      "heroTitle": "Entwickle dein Leben mit einem Schritt...",
-      "heroText": "Wir erweitern die Möglichkeiten des Internets. Perfekt für die modernste Software. Mach die Nacht zur Software-Nacht.",
+      "heroTitle": "Schnellerer Check-in. Zufriedenere Gäste.",
+      "heroText": "Gäste füllen das Anmeldeformular auf ihrem Smartphone aus und unterschreiben es – Ihre Mitarbeiter erhalten die Daten sofort. Kein Papier. Keine Wartezeiten. Keine Fehler.",
       "heroInput": "Gib deine E-Mail ein",
       "heroInputButton": "Senden"
     },
@@ -69,7 +69,29 @@
     "pricingPlanSection": {
       "pricingPlanTitle": "Beste Preispläne",
       "pricingPlanText": "Innovation, die die digitale Generation stärkt. Technologie im Rhythmus des Lebens.",
-      "pricingPlanSaveTo": "Spare bis zu 40 %"
+
+      "pricingCard": {
+        "pricingTitle": {
+          "title1": "BASISPLAN",
+          "title2": "PREMIUMPLAN",
+          "title3": "ULTIMATIVER PLAN"
+        },
+
+        "pricingFeatures": {
+          "item1": "Administratorzugang",
+          "item2": "Online Check-in Formular",
+          "item3": "Gästeunterschrift",
+          "item4": "Mehrsprachig",
+          "item5": "Erfassung personenbezogener Daten und PDF-Export",
+          "item6": "Unbegrenzte Zimmer",
+          "item7": "Erweiterte Admin-Verwaltung",
+          "item8": "Hotel Branding",
+          "item9": "24/7 Prioritäts-Support",
+          "item10": "Persönlicher Manager"
+        },
+
+        "pricingButton": "Plan kaufen"
+      }
     }
   },
 

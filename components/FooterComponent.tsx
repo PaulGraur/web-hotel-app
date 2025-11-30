@@ -15,18 +15,21 @@ const FooterComponent: FC = () => {
 
   const socialLinks = [
     {
-      href: "https://facebook.com/SoftPoint",
+      href: "https://facebook.com/Recepio",
       label: "Facebook",
     },
     {
-      href: "https://twitter.com/SoftPoint",
-      label: "Twitter",
+      href: "https://instagram.com/Recepio",
+      label: "Instagram",
     },
     {
-      href: "https://linkedin.com/company/SoftPoint",
+      href: "https://linkedin.com/company/Recepio",
       label: "LinkedIn",
     },
   ];
+
+  const hover =
+    "relative w-max hover:text-crimson transition-colors duration-300 ease-in-out after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-crimson hover:after:w-full after:transition-all after:duration-300 after:ease-in-out";
 
   return (
     <footer className="bg-blush/10 py-10 rounded-[30px] mx-[10px] mb-[10px] xl:mx-[20px] xl:mb-[20px]">
@@ -38,11 +41,7 @@ const FooterComponent: FC = () => {
             </h3>
             <nav className="flex flex-col space-y-2">
               {navLinks.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="relative w-max hover:text-crimson transition-colors duration-300 ease-in-out after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-crimson hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
-                >
+                <Link key={href} href={href} className={hover}>
                   {label}
                 </Link>
               ))}
@@ -59,16 +58,13 @@ const FooterComponent: FC = () => {
               <p>1010 Wien, Österreich</p>
               <p>
                 Telefon:{" "}
-                <Link href="tel:+41445556677" className="hover:text-crimson">
+                <Link href="tel:+41445556677" className={hover}>
                   +41 44 555 66 77
                 </Link>
               </p>
               <p>
                 E-Mail:{" "}
-                <Link
-                  href="mailto:info@point.at"
-                  className="hover:text-crimson"
-                >
+                <Link href="mailto:info@point.at" className={hover}>
                   info@point.ch
                 </Link>
               </p>
@@ -80,9 +76,9 @@ const FooterComponent: FC = () => {
               {f("officesTitle")}
             </h3>
             <ul className="space-y-2 text-ebony">
-              <li>Zürich: Bahnhofstrasse 1</li>
+              <li>St. Pölten</li>
               <li>Genf: Rue du Rhône 10</li>
-              <li>Bern: Kramgasse 5</li>
+              {/* <li>Bern: Kramgasse 5</li> */}
             </ul>
           </div>
 
@@ -97,7 +93,7 @@ const FooterComponent: FC = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative hover:text-crimson transition-colors duration-300 ease-in-out after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-crimson hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
+                    className={hover}
                   >
                     {label}
                   </Link>

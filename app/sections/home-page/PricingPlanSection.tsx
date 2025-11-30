@@ -19,38 +19,65 @@ const PricingPlanSection: FC = () => {
 
   const plans: Plan[] = [
     {
-      title: "BASIC PLAN",
-      price: "€50",
+      title: t("pricingCard.pricingTitle.title1"),
+      price: "€149",
       features: [
-        { name: "Limited Access Library", available: true },
-        { name: "100+ HTML UI Elements", available: false },
-        { name: "Hotline Support 24/7", available: false },
-        { name: "API & extension support", available: false },
+        {
+          name: `${t("pricingCard.pricingFeatures.item1") + " " + "1"}`,
+          available: true,
+        },
+        { name: t("pricingCard.pricingFeatures.item2"), available: true },
+        { name: t("pricingCard.pricingFeatures.item3"), available: true },
+        { name: t("pricingCard.pricingFeatures.item4"), available: true },
+        { name: t("pricingCard.pricingFeatures.item5"), available: true },
+        { name: t("pricingCard.pricingFeatures.item6"), available: false },
+        { name: t("pricingCard.pricingFeatures.item7"), available: false },
+        { name: t("pricingCard.pricingFeatures.item8"), available: false },
+        { name: t("pricingCard.pricingFeatures.item9"), available: false },
+        { name: t("pricingCard.pricingFeatures.item10"), available: false },
       ],
-      actionLabel: "Buy Plan",
+      actionLabel: t("pricingCard.pricingButton"),
     },
     {
-      title: "PREMIUM PLAN",
-      price: "€130",
+      title: t("pricingCard.pricingTitle.title2"),
+      price: "€249",
       features: [
-        { name: "Limited Access Library", available: true },
-        { name: "100+ HTML UI Elements", available: true },
-        { name: "Hotline Support 24/7", available: false },
-        { name: "API & extension support", available: false },
+        {
+          name: `${t("pricingCard.pricingFeatures.item1") + " " + "3"}`,
+          available: true,
+        },
+        { name: t("pricingCard.pricingFeatures.item2"), available: true },
+        { name: t("pricingCard.pricingFeatures.item3"), available: true },
+        { name: t("pricingCard.pricingFeatures.item4"), available: true },
+        { name: t("pricingCard.pricingFeatures.item5"), available: true },
+        { name: t("pricingCard.pricingFeatures.item6"), available: false },
+        { name: t("pricingCard.pricingFeatures.item7"), available: false },
+        { name: t("pricingCard.pricingFeatures.item8"), available: false },
+        { name: t("pricingCard.pricingFeatures.item9"), available: false },
+        { name: t("pricingCard.pricingFeatures.item10"), available: false },
       ],
-      className: "xl:scale-105",
-      actionLabel: "Buy Plan",
+      actionLabel: t("pricingCard.pricingButton"),
+      className: "xxl:scale-105",
     },
     {
-      title: "ULTIMATE PLAN",
-      price: "€250",
+      title: t("pricingCard.pricingTitle.title3"),
+      price: "€449",
       features: [
-        { name: "Limited Access Library", available: true },
-        { name: "100+ HTML UI Elements", available: true },
-        { name: "Hotline Support 24/7", available: true },
-        { name: "API & extension support", available: true },
+        {
+          name: `${t("pricingCard.pricingFeatures.item1") + " " + "5"}`,
+          available: true,
+        },
+        { name: t("pricingCard.pricingFeatures.item2"), available: true },
+        { name: t("pricingCard.pricingFeatures.item3"), available: true },
+        { name: t("pricingCard.pricingFeatures.item4"), available: true },
+        { name: t("pricingCard.pricingFeatures.item5"), available: true },
+        { name: t("pricingCard.pricingFeatures.item6"), available: false },
+        { name: t("pricingCard.pricingFeatures.item7"), available: false },
+        { name: t("pricingCard.pricingFeatures.item8"), available: false },
+        { name: t("pricingCard.pricingFeatures.item9"), available: false },
+        { name: t("pricingCard.pricingFeatures.item10"), available: false },
       ],
-      actionLabel: "Buy Plan",
+      actionLabel: t("pricingCard.pricingButton"),
     },
   ];
 
@@ -60,10 +87,9 @@ const PricingPlanSection: FC = () => {
         <div className="flex flex-col items-center xl:w-[50%] mb-12">
           <Typography tag="h2" mb text={t("pricingPlanTitle")} />
           <Typography tag="p" mb align="center" text={t("pricingPlanText")} />
-          <Typography tag="p" mb text={t("pricingPlanSaveTo")} />
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="w-[100%] grid gap-[20px] xxl:gap-[40px] xl:grid-cols-3">
           {plans.map((item, index) => (
             <PricingPlanCard key={index} plan={item} />
           ))}

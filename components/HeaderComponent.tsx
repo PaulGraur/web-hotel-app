@@ -28,6 +28,9 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
     { href: "/#pricing", label: t("headerNav.navPricing") },
   ];
 
+  const hover =
+    "relative w-max hover:text-crimson transition-colors duration-300 ease-in-out after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-crimson hover:after:w-full after:transition-all after:duration-300 after:ease-in-out";
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1440 && mobileMenuOpen) {
@@ -78,7 +81,7 @@ const HeaderComponent: FC<HeaderProps> = ({ locale }) => {
           <div className="flex items-center xl:gap-[200px] xxl:gap-[400px]">
             <nav className="hidden xl:flex space-x-6 text-[22px] font-medium">
               {navLinks.map(({ href, label }, idx) => (
-                <Link key={`${href}-${idx}`} href={href}>
+                <Link key={`${href}-${idx}`} href={href} className={hover}>
                   <span>{label}</span>
                 </Link>
               ))}
