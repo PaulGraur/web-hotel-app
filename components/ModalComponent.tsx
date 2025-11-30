@@ -5,6 +5,8 @@ import Image from "next/image";
 import Typography from "@/components/Typography";
 import Button from "@/components/ButtonComponent";
 import { motion, AnimatePresence } from "framer-motion";
+
+import { useTranslations } from "next-intl";
 import check from "@/images/vectors/check-round.svg";
 
 interface ModalProps {
@@ -26,6 +28,7 @@ const modalVariants = {
 };
 
 const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
+  const t = useTranslations("homePage.pricingPlanSection.pricingModel");
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [phone, setPhone] = useState("");
@@ -158,9 +161,13 @@ City: ${city}
                 </div>
 
                 <div className="flex justify-end gap-3">
-                  <Button text="Закрити" variant="outline" onClick={onClose} />
                   <Button
-                    text={loading ? "Відправка..." : "Відправити"}
+                    text={t("pricingClose")}
+                    variant="outline"
+                    onClick={onClose}
+                  />
+                  <Button
+                    text={loading ? t("pricingSending") : t("pricingSend")}
                     onClick={handleSubmit}
                   />
                 </div>
@@ -173,20 +180,15 @@ City: ${city}
                 className="flex flex-col items-center gap-4 text-center"
               >
                 <Image src={check} alt="check" width={80} height={80} />
-                <Typography
-                  tag="h3"
-                  mb
-                  align="center"
-                  text="Замовлення відправлено!"
-                />
+                <Typography tag="h3" mb align="center" text={t("modelTitle")} />
                 <Typography
                   tag="p"
                   mb
                   align="center"
-                  text="Дякуємо! Ми зв’яжемося з вами найближчим часом."
+                  text={t("modelConection")}
                 />
                 <Button
-                  text="Закрити"
+                  text={t("pricingClose")}
                   variant="outline"
                   onClick={() => {
                     onClose();

@@ -91,6 +91,16 @@
         },
 
         "pricingButton": "Buy Plan"
+      },
+
+      "pricingModel": {
+        "pricingBuy": "Buy",
+        "pricingClose": "Close",
+        "pricingSending": "Sending...",
+        "pricingSend": "Send",
+
+        "modelTitle": "Order shipped!",
+        "modelConection": "Thank you! We will contact you shortly."
       }
     }
   },

@@ -22,7 +22,7 @@ const countriesMenu: Country[] = [
 ];
 
 const LanguageChangeComponent: FC<LanguageProps> = ({ className }) => {
-  const pathname = usePathname();
+  const pathname = usePathname() || "/";
   const router = useRouter();
   const defaultCountry = countriesMenu[1];
 
@@ -31,7 +31,10 @@ const LanguageChangeComponent: FC<LanguageProps> = ({ className }) => {
     [pathname]
   );
 
-  const initialLocale = useMemo(() => pathname.split("/")[1], [pathname]);
+  const initialLocale = useMemo(() => {
+    const parts = pathname.split("/");
+    return parts[1] || defaultCountry.locale;
+  }, [pathname, defaultCountry.locale]);
 
   const [isFlagDropdownOpen, setFlagDropdownOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(
@@ -44,7 +47,6 @@ const LanguageChangeComponent: FC<LanguageProps> = ({ className }) => {
     const matchingCountry = countriesMenu.find(
       (country) => country.locale === locale
     );
-
     setSelectedCountry(matchingCountry || defaultCountry);
   }, [pathname, defaultCountry]);
 
@@ -107,25 +109,22 @@ const LanguageChangeComponent: FC<LanguageProps> = ({ className }) => {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="absolute bg-blush px-[14px] py-[20px] flex flex-col items-center gap-[8px] -right-[12px] xl:right-[0] w-max shadow-2xl rounded-[30px]"
             >
-              {countriesMenu.map((country) => {
-                if (country !== selectedCountry) {
-                  return (
-                    <motion.li
-                      key={country.code}
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.3 }}
-                      onClick={() => handleCountrySelection(country)}
-                    >
-                      <p className="w-[44px] xl:w-[60px] select-none font-bold text-center text-[22px] xl:text-[24px] text-ebony/80">
-                        {country.name}
-                      </p>
-                    </motion.li>
-                  );
-                }
-                return null;
-              })}
+              {countriesMenu
+                .filter((country) => country !== selectedCountry)
+                .map((country) => (
+                  <motion.li
+                    key={country.code}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                    onClick={() => handleCountrySelection(country)}
+                  >
+                    <p className="w-[44px] xl:w-[60px] select-none font-bold text-center text-[22px] xl:text-[24px] text-ebony/80">
+                      {country.name}
+                    </p>
+                  </motion.li>
+                ))}
             </motion.ul>
           )}
         </AnimatePresence>
