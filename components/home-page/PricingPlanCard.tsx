@@ -3,18 +3,16 @@ import Image from "next/image";
 import Typography from "@/components/Typography";
 import Button from "@/components/ButtonComponent";
 import icon from "@/images/home-page/feature-section/feature-icon.svg";
-import classNames from "classnames";
-
 import { Plan } from "@/app/sections/home-page/PricingPlanSection";
 
-const PricingPlanCard: FC<{ plan: Plan }> = ({ plan }) => {
+interface PricingPlanCardProps {
+  plan: Plan;
+  onSelect?: () => void;
+}
+
+const PricingPlanCard: FC<PricingPlanCardProps> = ({ plan, onSelect }) => {
   return (
-    <div
-      className={classNames(
-        "bg-white rounded-[30px] shadow-lg py-[15px] px-[25px] flex flex-col items-center xl:py-[35px] xl:px-[30px]",
-        plan.className
-      )}
-    >
+    <div className="bg-white rounded-[30px] shadow-lg py-[15px] px-[25px] flex flex-col items-center xl:py-[35px] xl:px-[30px] hover:scale-105 transition-transform duration-200">
       <div className="flex flex-col items-center">
         <Typography
           tag="h4"
@@ -54,7 +52,12 @@ const PricingPlanCard: FC<{ plan: Plan }> = ({ plan }) => {
         ))}
       </ul>
 
-      <Button text={plan.actionLabel} variant="outline" className="mt-auto" />
+      <Button
+        text={plan.actionLabel}
+        variant="outline"
+        className="mt-auto w-max"
+        onClick={onSelect}
+      />
     </div>
   );
 };

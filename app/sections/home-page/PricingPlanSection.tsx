@@ -1,7 +1,10 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useState } from "react";
 import Typography from "@/components/Typography";
 import PricingPlanCard from "@/components/home-page/PricingPlanCard";
 import { useTranslations } from "next-intl";
+import Modal from "@/components/ModalComponent";
 
 export interface Plan {
   title: string;
@@ -16,6 +19,7 @@ export interface Plan {
 
 const PricingPlanSection: FC = () => {
   const t = useTranslations("homePage.pricingPlanSection");
+  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
 
   const plans: Plan[] = [
     {
@@ -50,9 +54,9 @@ const PricingPlanSection: FC = () => {
         { name: t("pricingCard.pricingFeatures.item3"), available: true },
         { name: t("pricingCard.pricingFeatures.item4"), available: true },
         { name: t("pricingCard.pricingFeatures.item5"), available: true },
-        { name: t("pricingCard.pricingFeatures.item6"), available: false },
-        { name: t("pricingCard.pricingFeatures.item7"), available: false },
-        { name: t("pricingCard.pricingFeatures.item8"), available: false },
+        { name: t("pricingCard.pricingFeatures.item6"), available: true },
+        { name: t("pricingCard.pricingFeatures.item7"), available: true },
+        { name: t("pricingCard.pricingFeatures.item8"), available: true },
         { name: t("pricingCard.pricingFeatures.item9"), available: false },
         { name: t("pricingCard.pricingFeatures.item10"), available: false },
       ],
@@ -71,11 +75,11 @@ const PricingPlanSection: FC = () => {
         { name: t("pricingCard.pricingFeatures.item3"), available: true },
         { name: t("pricingCard.pricingFeatures.item4"), available: true },
         { name: t("pricingCard.pricingFeatures.item5"), available: true },
-        { name: t("pricingCard.pricingFeatures.item6"), available: false },
-        { name: t("pricingCard.pricingFeatures.item7"), available: false },
-        { name: t("pricingCard.pricingFeatures.item8"), available: false },
-        { name: t("pricingCard.pricingFeatures.item9"), available: false },
-        { name: t("pricingCard.pricingFeatures.item10"), available: false },
+        { name: t("pricingCard.pricingFeatures.item6"), available: true },
+        { name: t("pricingCard.pricingFeatures.item7"), available: true },
+        { name: t("pricingCard.pricingFeatures.item8"), available: true },
+        { name: t("pricingCard.pricingFeatures.item9"), available: true },
+        { name: t("pricingCard.pricingFeatures.item10"), available: true },
       ],
       actionLabel: t("pricingCard.pricingButton"),
     },
@@ -91,10 +95,23 @@ const PricingPlanSection: FC = () => {
 
         <div className="w-[100%] grid gap-[20px] xxl:gap-[40px] xl:grid-cols-3">
           {plans.map((item, index) => (
-            <PricingPlanCard key={index} plan={item} />
+            <PricingPlanCard
+              key={index}
+              plan={item}
+              onSelect={() => setSelectedPlan(item)}
+            />
           ))}
         </div>
       </div>
+
+      {selectedPlan && (
+        <Modal
+          isOpen={!!selectedPlan}
+          onClose={() => setSelectedPlan(null)}
+          planTitle={selectedPlan.title}
+          planPrice={selectedPlan.price}
+        />
+      )}
     </section>
   );
 };
