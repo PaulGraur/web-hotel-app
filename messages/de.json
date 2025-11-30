@@ -91,6 +91,16 @@
         },
 
         "pricingButton": "Plan kaufen"
+      },
+
+      "pricingModel": {
+        "pricingBuy": "Kaufen",
+        "pricingClose": "Schließen",
+        "pricingSending": "Senden...",
+        "pricingSend": "Senden",
+
+        "modelTitle": "Bestellung versendet!",
+        "modelConection": "Danke! Wir werden Sie in Kürze kontaktieren."
       }
     }
   },
