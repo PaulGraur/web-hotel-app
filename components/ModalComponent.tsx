@@ -5,9 +5,11 @@ import Image from "next/image";
 import Typography from "@/components/Typography";
 import Button from "@/components/ButtonComponent";
 import { motion, AnimatePresence } from "framer-motion";
-
 import { useTranslations } from "next-intl";
 import check from "@/images/vectors/check-round.svg";
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 interface ModalProps {
   isOpen: boolean;
@@ -38,19 +40,22 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    if (isOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
   const handleSubmit = async () => {
-    if (!name || !surname || !phone || !city) {
+    if (!name.trim() || !surname.trim() || !phone.trim() || !city.trim()) {
       alert("Заповніть усі поля");
+      return;
+    }
+
+    const digitsOnly = phone.replace(/\D/g, "");
+    if (digitsOnly.length < 8) {
+      alert("Введіть коректний номер телефону");
       return;
     }
 
@@ -58,12 +63,13 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
     try {
       const message = `
 📝 Замовлення плану:
-Title: ${planTitle}
-Price: ${planPrice}
-Name: ${name}
-Surname: ${surname}
-Phone: ${phone}
-City: ${city}
+
+🔸 Title: ${planTitle}
+🔹 Price: ${planPrice}
+🔸 Name: ${name}
+🔹 Surname: ${surname}
+🔸 Phone: ${phone}
+🔹 City: ${city}
       `;
 
       const res = await fetch("/api/sendTelegram", {
@@ -111,7 +117,7 @@ City: ${city}
         >
           <motion.div
             ref={modalRef}
-            className="bg-white rounded-[30px] p-6 w-full max-w-md mx-4 shadow-lg"
+            className="bg-white rounded-[30px] px-[20px] py-[60px] w-full max-w-md mx-4 shadow-lg"
             variants={modalVariants}
             initial="hidden"
             animate="visible"
@@ -144,13 +150,47 @@ City: ${city}
                     onChange={(e) => setSurname(e.target.value)}
                     className={inputClass}
                   />
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
+
+                  <PhoneInput
+                    country={"ua"}
                     value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className={inputClass}
+                    onChange={setPhone}
+                    inputStyle={{
+                      width: "100%",
+                      height: "50.8px",
+                      borderRadius: "30px",
+                      paddingLeft: "64px",
+                      border: "1px solid #d1d5db",
+                      color: "#1e293b",
+                      outline: "none",
+                      fontSize: "16px",
+                      lineHeight: "48px",
+                      transition: "all 0.2s",
+                    }}
+                    buttonStyle={{
+                      borderRadius: "30px 0 0 30px",
+                      height: "50.8px",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      background: "#E68E8E10",
+                      border: "none",
+                      marginRight: "-1px",
+                      boxShadow: "none",
+                    }}
+                    dropdownStyle={{
+                      borderRadius: "10px",
+                      border: "1px solid #d1d5db",
+                      boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+                      backgroundColor: "#ffffff",
+                      maxHeight: "200px",
+                      overflowY: "auto",
+                    }}
+                    placeholder=""
+                    specialLabel=""
+                    containerClass="phone-input-container"
+                    countryCodeEditable={false}
                   />
+
                   <input
                     type="text"
                     placeholder="City"
@@ -181,12 +221,7 @@ City: ${city}
               >
                 <Image src={check} alt="check" width={80} height={80} />
                 <Typography tag="h3" mb align="center" text={t("modelTitle")} />
-                <Typography
-                  tag="p"
-                  mb
-                  align="center"
-                  text={t("modelConection")}
-                />
+                <Typography tag="p" align="center" text={t("modelConection")} />
                 <Button
                   text={t("pricingClose")}
                   variant="outline"
