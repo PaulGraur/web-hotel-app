@@ -152,7 +152,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
                   />
 
                   <PhoneInput
-                    country={"ua"}
+                    country={"de"}
                     value={phone}
                     onChange={setPhone}
                     inputStyle={{
