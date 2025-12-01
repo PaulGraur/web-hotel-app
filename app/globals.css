@@ -32,6 +32,20 @@
   scrollbar-color: #374151 #ffffff00;
 }
 
+.phone-input-container input:focus {
+  border-color: #f44545 !important;
+  box-shadow: 0 0 0 0.7px #f44545;
+  outline: none;
+}
+
+.phone-input-container .flag-dropdown,
+.phone-input-container .flag-dropdown:hover,
+.phone-input-container .flag-dropdown:focus {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 html {
   height: 100%;
   scroll-behavior: smooth;
