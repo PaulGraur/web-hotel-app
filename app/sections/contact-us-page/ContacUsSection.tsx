@@ -1,132 +1,99 @@
 "use client";
 import Image from "next/image";
-import { Link } from "@/navigation";
-import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
-import { hasLength, isEmail, useForm } from "@mantine/form";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect, ChangeEvent } from "react";
+import { useForm, hasLength, isEmail } from "@mantine/form";
 
 import Input from "@/components/InputComponent";
 import Button from "@/components/ButtonComponent";
 import Typography from "@/components/Typography";
 import LoaderComponent from "@/components/LoaderComponent";
-import { useTranslations } from "next-intl";
 
 import Message from "@/images/contact-us/message.svg";
 import information from "@/images/home-page/feature-section/feature.png";
+import checkRound from "@/images/vectors/check-round.svg";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 
 const ContactUsSection = () => {
   const t = useTranslations("contactUsPage.contactUsSection");
-  const MAX_ATTEMPTS = 3;
-  const [value, setValue] = useState("");
-  const [attempts, setAttempts] = useState(0);
-  const [isDisabled, setIsDisabled] = useState(false);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const [showCloud, setShowCloud] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [showCloud, setShowCloud] = useState(false);
   const [showButton, setShowButton] = useState(true);
+  const [successModal, setSuccessModal] = useState(false);
 
+  // Resize detection
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1023.99);
-    };
+    const handleResize = () => setIsMobile(window.innerWidth <= 1023.99);
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Show cloud after 2s
+  useEffect(() => {
+    const timer = setTimeout(() => setShowCloud(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Show button based on scroll
   useEffect(() => {
     const handleScroll = () => {
-      const footerElement = document.querySelector("footer");
-      if (footerElement) {
-        const footerPosition = footerElement.getBoundingClientRect().top;
-        if (footerPosition <= window.innerHeight) {
-          setShowButton(false);
-        } else {
-          setShowButton(true);
-        }
-      }
+      const footer = document.querySelector("footer");
+      if (!footer) return;
+      const footerPosition = footer.getBoundingClientRect().top;
+      setShowButton(footerPosition > window.innerHeight);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowCloud(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
+  // Form
   const form = useForm({
-    initialValues: {
-      fullName: "",
-      email: "",
-      message: "",
-    },
+    initialValues: { fullName: "", email: "", message: "" },
     validate: {
       fullName: hasLength(
-        { min: 3 },
-        "Full Name must be at least 3 characters"
+        { min: 2 },
+        "Full Name must be at least 2 characters"
       ),
       email: isEmail("Invalid email"),
-      message: hasLength({ min: 4 }, "Message must have at least 6 characters"),
+      message: hasLength({ min: 6 }, "Message must have at least 6 characters"),
     },
   });
 
-  useEffect(() => {
-    const savedAttempts = localStorage.getItem("contactUsAttempts");
-    const savedTime = localStorage.getItem("contactUsTime");
-
-    if (savedAttempts && savedTime) {
-      const parsedAttempts = Number(savedAttempts);
-      const lastAttemptTime = Number(savedTime);
-      const currentTime = new Date().getTime();
-      const timeElapsed = currentTime - lastAttemptTime;
-
-      if (timeElapsed > 96 * 60 * 60 * 1000) {
-        setAttempts(0);
-        localStorage.setItem("contactUsAttempts", "0");
-      } else {
-        setAttempts(parsedAttempts);
-      }
-
-      if (parsedAttempts >= MAX_ATTEMPTS) {
-        setIsDisabled(true);
-      }
-    } else {
-      setAttempts(0);
-    }
-  }, []);
-
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-
-    const errors = form.validate();
-    if (Object.keys(errors.errors).length > 0) {
-      return;
-    }
+    const validation = form.validate();
+    if (Object.keys(validation.errors).length > 0) return;
 
     setIsLoading(true);
 
-    const values = form.values;
+    const { fullName, email, message } = form.values;
+    const telegramText = `📬 Contact form:\n👤 Name: ${fullName}\n📩 Email: ${email}\n📝 Message: ${message}`;
 
-    if (attempts < MAX_ATTEMPTS) {
-      const newAttempts = attempts + 1;
-      setAttempts(newAttempts);
-      localStorage.setItem("contactUsAttempts", newAttempts.toString());
-      localStorage.setItem("contactUsTime", new Date().getTime().toString());
+    try {
+      const res = await fetch("/api/sendTelegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: telegramText }),
+      });
 
-      if (newAttempts >= MAX_ATTEMPTS) {
-        setIsDisabled(true);
-      }
+      if (!res.ok) throw new Error("Failed to send");
+
+      form.reset();
+      setSuccessModal(true);
+
+      // Автозакриття через 10 секунд
+      setTimeout(() => setSuccessModal(false), 10000);
+    } catch (err) {
+      console.error(err);
+      alert("Error. Try again later.");
+    } finally {
+      setIsLoading(false);
     }
-
-    setIsLoading(false);
-    form.reset();
-    setValue("");
   };
 
   return (
@@ -148,59 +115,45 @@ const ContactUsSection = () => {
               onSubmit={handleSubmit}
               className="w-full flex flex-col items-center gap-[30px] lg:items-start"
             >
-              {isDisabled ? (
-                <Typography
-                  tag="p"
-                  align="center"
-                  mt
-                  fontWeight="bold"
-                  text={t("contactUsAttempts")}
-                ></Typography>
-              ) : (
-                attempts > 0 &&
-                attempts < MAX_ATTEMPTS && (
-                  <p className="text-black">
-                    {t("contactUsAttemptsLeft")} {MAX_ATTEMPTS - attempts}
-                  </p>
-                )
-              )}
               <div className="w-full flex flex-col gap-[14px]">
                 <Input
                   inputType="input"
                   placeholder={t("contactUsName")}
-                  required={true}
-                  bordered={true}
-                  className=" lg:w-[90%] xl:w-[70%] "
+                  required
+                  bordered
+                  className="lg:w-[90%] xl:w-[70%]"
                   errorType="critical"
-                  disabled={isDisabled}
                   {...form.getInputProps("fullName")}
                 />
 
                 <Input
                   inputType="input"
-                  required={true}
-                  bordered={true}
                   placeholder="Email"
+                  required
                   type="email"
-                  className="lg:w-[90%] xl:w-[70%] "
+                  bordered
+                  className="lg:w-[90%] xl:w-[70%]"
                   errorType="critical"
-                  disabled={isDisabled}
                   {...form.getInputProps("email")}
                 />
 
                 <Input
                   inputType="textarea"
-                  type="text"
                   placeholder={t("contactUsMessage")}
-                  required={true}
-                  bordered={true}
-                  className="focus:outline-none focus:border-[1px] focus:border-darkBlack"
-                  {...form.getInputProps("message")}
+                  required
+                  bordered
+                  className="focus:outline-none focus:border-darkBlack"
                   errorType="critical"
-                  disabled={isDisabled}
+                  {...form.getInputProps("message")}
                 />
               </div>
-              <Button text={t("contactUsSend")} variant="filled" />
+
+              <Button
+                text={t("contactUsSend")}
+                variant="filled"
+                className="px-12"
+                disabled={isLoading}
+              />
             </form>
           </div>
 
@@ -214,38 +167,66 @@ const ContactUsSection = () => {
           />
         </div>
 
+        {/* Mobile Telegram Cloud Button */}
         {isMobile && showButton && (
           <div className="fixed bottom-3 right-3 z-10">
             <div
-              className={`cursor-pointer py-1 px-3 md:py-3 md:px-3 transition duration-300 rounded-full ${
-                showCloud
-                  ? "bg-blue-500 hover:bg-blue-600 transition duration-300 ease-out"
-                  : "bg-darkBlack"
+              className={`cursor-pointer py-1 px-3 md:py-3 md:px-3 transition rounded-full ${
+                showCloud ? "bg-blue-500 hover:bg-blue-600" : "bg-darkBlack"
               }`}
             >
               {showCloud && (
                 <motion.div
-                  className="absolute left-[-370%] border bottom-10 md:bottom-[70%] bg-white text-darkBlack p-2 rounded-[24px] shadow-lg w-[185px] md:w-[240px]"
+                  className="absolute left-[-370%] bottom-10 md:bottom-[70%] bg-white text-darkBlack p-2 rounded-[24px] shadow-lg w-[185px] md:w-[240px]"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                   <Typography tag="p" text={t("contactUsTelegram")} />
                 </motion.div>
               )}
+
               <Link href="https://t.me/" target="_blank">
                 <Image
                   src={Message}
                   alt="message"
-                  className="w-6 h-10 md:w-10 md:h-10 transition-transform duration-300"
                   width={40}
                   height={53}
+                  className="w-6 h-10 md:w-10 md:h-10"
                 />
               </Link>
             </div>
           </div>
         )}
       </section>
+
+      {/* Success Modal */}
+      <AnimatePresence>
+        {successModal && (
+          <motion.div
+            className="fixed inset-0 bg-black/50 z-[999] flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="bg-white p-8 rounded-[20px] text-center shadow-lg w-[90%] max-w-[350px] flex flex-col items-center"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+            >
+              <Image src={checkRound} alt="Check" width={80} className="mb-5" />
+              <Typography tag="h3" mb align="center" text={t("successTitle")} />
+              <Typography tag="p" mb align="center" text={t("successText")} />
+              <Button
+                text="OK"
+                variant="outline"
+                className="w-full"
+                onClick={() => setSuccessModal(false)}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

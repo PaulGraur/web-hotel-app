@@ -4,20 +4,45 @@ import Image from "next/image";
 import Typography from "@/components/Typography";
 import Button from "@/components/ButtonComponent";
 import hero from "@/images/home-page/hero-section/hero.png";
-
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import checkRound from "@/images/vectors/check-round.svg";
 
 const HeroSection: FC = () => {
   const t = useTranslations("homePage.heroSection");
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [successModal, setSuccessModal] = useState(false);
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   async function handleSubmit() {
-    await fetch("/api/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
-    setEmail("");
+    if (!emailRegex.test(email)) return;
+
+    setLoading(true);
+
+    try {
+      const message = `📩 New subscription:\nE-mail: ${email}`;
+
+      const res = await fetch("/api/sendTelegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+
+      if (!res.ok) throw new Error("Помилка");
+
+      setEmail("");
+      setSuccessModal(true);
+
+      setTimeout(() => {
+        setSuccessModal(false);
+      }, 10000);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -49,10 +74,11 @@ const HeroSection: FC = () => {
             />
 
             <Button
-              text={t("heroInputButton")}
+              text={loading ? t("heroSending") : t("heroInputButton")}
               variant="filled"
               onClick={handleSubmit}
               className="px-2 py-2 xl:px-8"
+              disabled={!emailRegex.test(email)}
             />
           </div>
         </div>
@@ -61,6 +87,51 @@ const HeroSection: FC = () => {
           <Image src={hero} alt="hero" className="max-w-full h-auto" />
         </div>
       </div>
+
+      {/* Success Modal */}
+      <AnimatePresence>
+        {successModal && (
+          <motion.div
+            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="flex flex-col items-center bg-white rounded-[20px] p-8 text-center shadow-lg w-[90%] max-w-[350px]"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+            >
+              <Image
+                src={checkRound}
+                alt="Check Round"
+                width={80}
+                className="mb-[20px]"
+              />
+              <Typography
+                tag="h3"
+                mb
+                align="center"
+                text={t("heroSuccessTitle")}
+              />
+              <Typography
+                tag="p"
+                mb
+                align="center"
+                text={t("heroSuccessText")}
+              />
+
+              <Button
+                text="OK"
+                variant="outline"
+                onClick={() => setSuccessModal(false)}
+                className="w-full mt-4"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

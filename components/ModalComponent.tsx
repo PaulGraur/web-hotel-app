@@ -35,6 +35,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
   const [surname, setSurname] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
+  const [mail, setMail] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -48,7 +49,13 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
   }, [isOpen]);
 
   const handleSubmit = async () => {
-    if (!name.trim() || !surname.trim() || !phone.trim() || !city.trim()) {
+    if (
+      !name.trim() ||
+      !surname.trim() ||
+      !phone.trim() ||
+      !city.trim() ||
+      !mail.trim()
+    ) {
       alert("Заповніть усі поля");
       return;
     }
@@ -56,6 +63,12 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
     const digitsOnly = phone.replace(/\D/g, "");
     if (digitsOnly.length < 8) {
       alert("Введіть коректний номер телефону");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(mail)) {
+      alert("Введіть коректний E-mail");
       return;
     }
 
@@ -69,7 +82,8 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
 🔸 Name: ${name}
 🔹 Surname: ${surname}
 🔸 Phone: ${phone}
-🔹 City: ${city}
+🔹 E-mail: ${mail}
+🔸 City: ${city}
       `;
 
       const res = await fetch("/api/sendTelegram", {
@@ -85,6 +99,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
       setSurname("");
       setPhone("");
       setCity("");
+      setMail("");
     } catch (err) {
       console.error(err);
       alert("Помилка при відправці. Спробуйте ще раз");
@@ -148,6 +163,14 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
                     placeholder="Surname"
                     value={surname}
                     onChange={(e) => setSurname(e.target.value)}
+                    className={inputClass}
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="E-mail"
+                    value={mail}
+                    onChange={(e) => setMail(e.target.value)}
                     className={inputClass}
                   />
 
