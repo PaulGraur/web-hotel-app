@@ -13,7 +13,10 @@
       "heroTitle": "Faster Check-In. Happier Guests.",
       "heroText": "Guests fill and sign the registration form on their phone — your staff gets the data instantly. No paper. No waiting. No mistakes.",
       "heroInput": "Enter your email",
-      "heroInputButton": "Send"
+      "heroInputButton": "Send",
+      "heroSending": "Sent",
+      "heroSuccessTitle": "Thank you!",
+      "heroSuccessText": "Email sent successfully!"
     },
 
     "solutionSection": {
@@ -114,7 +117,9 @@
       "contactUsName": "Name",
       "contactUsMessage": "Message",
       "contactUsSend": "Send",
-      "contactUsTelegram": "Write to us on Telegram for quick assistance!"
+      "contactUsTelegram": "Write to us on Telegram for quick assistance!",
+      "successTitle": "Thank you!",
+      "successText": "Your application has been successfully submitted!"
     }
   },
 

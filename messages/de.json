@@ -13,7 +13,10 @@
       "heroTitle": "Schnellerer Check-in. Zufriedenere Gäste.",
       "heroText": "Gäste füllen das Anmeldeformular auf ihrem Smartphone aus und unterschreiben es – Ihre Mitarbeiter erhalten die Daten sofort. Kein Papier. Keine Wartezeiten. Keine Fehler.",
       "heroInput": "Gib deine E-Mail ein",
-      "heroInputButton": "Senden"
+      "heroInputButton": "Senden",
+      "heroSending": "Gesendet",
+      "heroSuccessTitle": "Danke schön!",
+      "heroSuccessText": "E-Mail erfolgreich versendet!"
     },
 
     "solutionSection": {
@@ -114,7 +117,9 @@
       "contactUsName": "Name",
       "contactUsMessage": "Nachricht",
       "contactUsSend": "Senden",
-      "contactUsTelegram": "Schreiben Sie uns auf Telegram für schnelle Unterstützung!"
+      "contactUsTelegram": "Schreiben Sie uns auf Telegram für schnelle Unterstützung!",
+      "successTitle": "Danke schön!",
+      "successText": "Ihre Bewerbung wurde erfolgreich übermittelt!"
     }
   },
 

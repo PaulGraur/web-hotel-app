@@ -116,8 +116,8 @@ const InputComponent: FC<InputProps> = ({
     if (inputType === "select") {
       const filteredOptions = inputValue
         ? options.filter((option) =>
-          option.label.toLowerCase().includes(inputValue.toLowerCase())
-        )
+            option.label.toLowerCase().includes(inputValue.toLowerCase())
+          )
         : options;
 
       return (
@@ -130,7 +130,7 @@ const InputComponent: FC<InputProps> = ({
               value={
                 selected !== null && inputValue === ""
                   ? options?.find((option) => option.value === selected)
-                    ?.label || ""
+                      ?.label || ""
                   : inputValue
               }
               name={name}
@@ -143,8 +143,9 @@ const InputComponent: FC<InputProps> = ({
 
             {isOpen && options.length > 0 && (
               <motion.ul
-                className={`absolute mt-2 w-full border border-charcoal/50 rounded-[24px] bg-white ${scrollable ? "max-h-[150px] overflow-y-auto z-[10]" : ""
-                  }`}
+                className={`absolute mt-2 w-full border border-charcoal/50 rounded-[24px] bg-white ${
+                  scrollable ? "max-h-[150px] overflow-y-auto z-[10]" : ""
+                }`}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
@@ -164,8 +165,9 @@ const InputComponent: FC<InputProps> = ({
           </div>
           {error && (
             <p
-              className={`text-[14px] ${errorType === "critical" ? "text-darkBlack" : "text-gray-400"
-                }`}
+              className={`text-[14px] ${
+                errorType === "critical" ? "text-crimson" : "text-gray-400"
+              }`}
             >
               {error}
             </p>
@@ -189,8 +191,9 @@ const InputComponent: FC<InputProps> = ({
           />
           {error && (
             <p
-              className={`text-[14px] ${errorType === "critical" ? "text-darkBlack" : "text-ivory"
-                }`}
+              className={`text-[14px] ${
+                errorType === "critical" ? "text-darkBlack" : "text-ivory"
+              }`}
             >
               {error}
             </p>
@@ -231,8 +234,9 @@ const InputComponent: FC<InputProps> = ({
 
           {error && (
             <p
-              className={`text-[14px] ${errorType === "critical" ? "text-darkBlack" : "text-ivory"
-                }`}
+              className={`text-[14px] ${
+                errorType === "critical" ? "text-darkBlack" : "text-ivory"
+              }`}
             >
               {error}
             </p>
@@ -252,8 +256,9 @@ const InputComponent: FC<InputProps> = ({
           />
           {error && (
             <p
-              className={`text-[14px] ${errorType === "critical" ? "text-darkBlack" : "text-ivory"
-                }`}
+              className={`text-[14px] ${
+                errorType === "critical" ? "text-darkBlack" : "text-ivory"
+              }`}
             >
               {error}
             </p>
