@@ -81,7 +81,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
 🔹 Price: ${planPrice}
 🔸 Name: ${name}
 🔹 Surname: ${surname}
-🔸 Phone: ${phone}
+🔸 Phone: +${phone}
 🔹 E-mail: ${mail}
 🔸 City: ${city}
       `;
@@ -175,7 +175,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, planTitle, planPrice }) => {
                   />
 
                   <PhoneInput
-                    country={"de"}
+                    country={"at"}
                     value={phone}
                     onChange={setPhone}
                     inputStyle={{
